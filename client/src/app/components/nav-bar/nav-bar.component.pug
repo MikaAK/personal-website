@@ -2,19 +2,19 @@ mat-toolbar.bg-dark-blue
   nav(fxFlex='1 1 auto', fxLayoutAlign='center center')
     ol(fxLayoutAlign='center center', fxLayoutGap='20px')
       li.white
-        a.mk-list-link Home
+        a.mk-list-link([ngx-scroll-to]="'#home'") Home
 
       hr.b--white.h2
 
       li.white
-        a.mk-list-link Portfolio
+        a.mk-list-link([ngx-scroll-to]="'#portfolio'") Portfolio
 
       hr.b--white.h2
 
-      li.white
-        a.mk-list-link Blog
+      //- li.white
+      //-   a.mk-list-link Blog
 
-      hr.b--white.h2
+      //- hr.b--white.h2
 
       li.white
-        a.mk-list-link Contact
+        a.mk-list-link([ngx-scroll-to]="'#contact'") Contact

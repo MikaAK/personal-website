@@ -1,0 +1,8 @@
+@import '~styles/utility';
+
+:host {
+  @media screen and (max-width: 600px) {
+    display: block;
+    margin-bottom: $mat-toolbar-height;
+  }
+}

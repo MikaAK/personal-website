@@ -17,6 +17,7 @@ import {FlexLayoutModule} from '@angular/flex-layout'
 import {environment} from '../environments/environment'
 
 import {NavBarModule} from './components/nav-bar'
+import {CopyFooterModule} from './components/copy-footer'
 
 import {AppComponent} from './app.component'
 import {routes} from './app.routes'
@@ -26,6 +27,7 @@ import {routes} from './app.routes'
     AppComponent
   ],
   imports: [
+    CopyFooterModule,
     NavBarModule,
     BrowserModule,
     FlexLayoutModule,

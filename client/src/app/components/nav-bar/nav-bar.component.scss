@@ -1,0 +1,14 @@
+@import '~styles/utility';
+
+:host {
+  @media screen and (max-width: 600px) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+
+  .mat-toolbar {
+    height: $mat-toolbar-height;
+  }
+}

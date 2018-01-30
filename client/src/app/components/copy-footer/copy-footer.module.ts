@@ -2,18 +2,16 @@ import {NgModule} from '@angular/core'
 import {RouterModule} from '@angular/router'
 import {MatToolbarModule} from '@angular/material'
 import {FlexLayoutModule} from '@angular/flex-layout'
-import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to'
 
-import {NavBarComponent} from './nav-bar.component'
+import {CopyFooterComponent} from './copy-footer.component'
 
 @NgModule({
   imports: [
     FlexLayoutModule,
     MatToolbarModule,
-    RouterModule,
-    ScrollToModule.forRoot()
+    RouterModule
   ],
-  exports: [NavBarComponent],
-  declarations: [NavBarComponent]
+  exports: [CopyFooterComponent],
+  declarations: [CopyFooterComponent]
 })
-export class NavBarModule { }
+export class CopyFooterModule { }

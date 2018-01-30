@@ -36,6 +36,7 @@
     "@ngrx/entity": "^4.1.1",
     "@ngrx/store": "^4.1.1",
     "@ngrx/store-devtools": "^4.1.1",
+    "@nicky-lenaers/ngx-scroll-to": "^0.5.0",
     "@swimlane/ngx-charts": "^7.0.1",
     "angular-safeguard": "^2.0.1",
     "apollo-angular": "^1.0.0",

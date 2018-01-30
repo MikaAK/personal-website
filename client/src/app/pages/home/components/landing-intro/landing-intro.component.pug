@@ -1,6 +1,6 @@
 .w-100.vh-65.bg-light-blue.ph5.pt5.pb3.trskY8.absolute.top-0.z-0
 
-.z-1(fxLayout, fxLayoutAlign='center center')
+.z-1(fxLayout, fxLayoutAlign='center center', fxLayoutWrap.gt-xs)
   .pa4.tc.w-34.mw-m
     img.w-100.br-100.dib(src='https://placeimg.com/500/500/people', alt='Profile Photo')
 
@@ -11,16 +11,16 @@
     .white(fxLayout)
       h3.f3 Software Developer
 
-      .w1
+      .w2
         != require('assets/svg/octocat.svg')
 
-      .w1
+      .w2
         != require('assets/svg/linkedin.svg')
 
     button(mat-button, color='accent') Contact for Rates
 
-div
-  mat-card.bg-white(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
+.w-100
+  mat-card.mw-l.bg-white.w-33.center(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
    div(fxLayout='column', fxLayoutAlign='center center')
      .w3
       != require('assets/svg/backend-icon.svg')
