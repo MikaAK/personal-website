@@ -1,0 +1,15 @@
+{
+  "name": "MyApp",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "short_name": "MyApp",
+  "description": "Replace with a custom description",
+  "background_color": "252E2E",
+  "theme_color": "252E2E",
+  "serviceworker": {
+    "src": "ngsw-worker.js",
+    "scope": "/",
+    "use_cache": false
+  }
+}

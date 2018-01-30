@@ -1,0 +1,11 @@
+@import '~styles/utility';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: calc(100vh - #{$mat-toolbar-height});
+  position: relative;
+  overflow: hidden;
+}

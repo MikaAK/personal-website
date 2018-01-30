@@ -1,0 +1,6 @@
+@import '~styles/utility';
+
+:host /deep/ mat-card {
+  height: 300px;
+  min-width: 325px;
+}

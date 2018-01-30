@@ -1,0 +1,31 @@
+h2.f2.tc Skills
+
+.ph6(fxLayout, fxLayoutWrap, fxLayoutAlign='center center')
+  .mw-l(fxFlex='33%')
+    ngx-charts-pie-chart(
+      [view]='[400, 400]',
+      [scheme]='frontendSkillsSchemes',
+      [results]='frontendSkills',
+      [tooltipText]='stripNumbers',
+      [labels]='true'
+    )
+
+  .mw-l(fxFlex='33%')
+    ngx-charts-pie-chart(
+      [view]='[400, 400]',
+      [scheme]='miscSkillsSchemes',
+      [results]='miscSkills',
+      [labelFormatting]='edgeCaseLabelFormat',
+      [tooltipText]='stripNumbers',
+      [labels]='true'
+    )
+
+  .mw-l(fxFlex='33%')
+    ngx-charts-pie-chart(
+      [view]='[400, 400]',
+      [scheme]='backendSkillsSchemes',
+      [results]='backendSkills',
+      [tooltipText]='stripNumbers',
+      [labels]='true'
+    )
+

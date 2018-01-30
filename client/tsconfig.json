@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "target": "es5",
+    "rootDirs": ["./src", "./src/app"],
+    "plugins": [
+      {"name": "@angular/language-service"},
+      {
+        "name": "ts-graphql-plugin",
+        "schema": "./schema.json",
+        "tag": "gql"
+      }
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "preserveWhitespaces": false
+  }
+}

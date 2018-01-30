@@ -1,0 +1,40 @@
+.w-100.vh-65.bg-light-blue.ph5.pt5.pb3.trskY8.absolute.top-0.z-0
+
+.z-1(fxLayout, fxLayoutAlign='center center')
+  .pa4.tc.w-34.mw-m
+    img.w-100.br-100.dib(src='https://placeimg.com/500/500/people', alt='Profile Photo')
+
+  div(fxLayout='column', fxLayoutAlign='center center')
+    .white
+      h1.f1 Mika Kalathil
+
+    .white(fxLayout)
+      h3.f3 Software Developer
+
+      .w1
+        != require('assets/svg/octocat.svg')
+
+      .w1
+        != require('assets/svg/linkedin.svg')
+
+    button(mat-button, color='accent') Contact for Rates
+
+div
+  mat-card.bg-white(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
+   div(fxLayout='column', fxLayoutAlign='center center')
+     .w3
+      != require('assets/svg/backend-icon.svg')
+
+     span Backend
+
+   div(fxLayout='column', fxLayoutAlign='center center')
+     .w3
+      != require('assets/svg/contract-icon.svg')
+
+     span Accepting Contracts
+
+   div(fxLayout='column', fxLayoutAlign='center center')
+     .w3
+      != require('assets/svg/frontend-icon.svg')
+
+     span Frontend

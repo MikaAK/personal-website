@@ -1,0 +1,5 @@
+export * from './landing-intro/landing-intro.component'
+export * from './services/services.component'
+export * from './skills/skills.component'
+export * from './contact/contact.component'
+export * from './projects/projects.component'

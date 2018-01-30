@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+@import 'mat-palettes';
+
+@include mat-core();
+
+$palette-primary: mat-palette($mat-primary);
+$palette-secondary: mat-palette($mat-secondary, A200, A100, A400);
+$palette-warn: mat-palette($mat-red);
+$theme: mat-dark-theme($palette-primary, $palette-secondary);
+$secondary-theme: mat-dark-theme($palette-secondary, $palette-primary);
+

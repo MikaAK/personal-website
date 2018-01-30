@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#FFF" fill-rule="nonzero" d="M30 41H1V1h22.786l2.762 2.759L30 7.207z"/>
+    <path stroke="#7ED321" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30 41H1V1h22.786l2.762 2.759L30 7.207z"/>
+    <path fill="#C6E3F8" fill-rule="nonzero" d="M24 7h6l-2.667-2.667L24 1z"/>
+    <path stroke="#7ED321" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24 7h6l-2.667-2.667L24 1zM7 19h17m-14 4h11M7 27h17m-14 5h11M10 15h11"/>
+    <path fill="#FFF" fill-rule="nonzero" d="M37 35h4V4h-4z"/>
+    <path stroke="#7ED321" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37 35h4V4h-4z"/>
+    <path fill="#C6E3F8" fill-rule="nonzero" d="M41 4h-3V1.9c0-.497.503-.9 1.125-.9h.75c.622 0 1.125.403 1.125.9V4z"/>
+    <path stroke="#7ED321" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41 4h-3V1.9c0-.497.503-.9 1.125-.9h.75c.622 0 1.125.403 1.125.9V4zm-4 1l-3 1m0 1v9m5.667 24h-1.334L37 36h4zM39 40v1"/>
+    <path fill="#C6E3F8" fill-rule="nonzero" d="M37 36h4V25h-4z"/>
+    <path stroke="#7ED321" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37 36h4V25h-4zm0-3h4m-4-3h4m-4-3h4"/>
+  </g>
+</svg>

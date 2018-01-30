@@ -1,0 +1,10 @@
+// This file is to import mixins/variables
+
+// Variables
+@import '~tachyons-sass/scss/variables';
+@import 'variables/color';
+@import 'variables/sizing';
+
+// Mixins
+@import 'mixins/placeholder';
+@import 'mixins/full-window';

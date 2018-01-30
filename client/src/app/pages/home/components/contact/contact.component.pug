@@ -1,0 +1,35 @@
+h2.f2.tc Contact
+
+mat-card
+  form(
+    novalidate,
+    [formGroup]='contactGroup',
+    (ngSubmit)='onSubmit(contactGroup.value)',
+    fxLayout='column',
+    fxLayoutAlign='space-between center'
+  )
+    div(fxLayout, fxLayoutAlign='space-between')
+      input(
+        matInput,
+        mkTrimInput,
+        placeholder='Name',
+        formControlName='name'
+      )
+
+      input(
+        matInput,
+        mkTrimInput,
+        placeholder='Email',
+        formControlName='email'
+      )
+
+    div
+      textarea(
+        matInput,
+        mkTrimInput,
+        placeholder='Message',
+        formControlName='message'
+      )
+
+    .tc
+      button(mat-button, type='submit') Send
