@@ -7,6 +7,7 @@ import {FlexLayoutModule} from '@angular/flex-layout'
 import {PieChartModule} from '@swimlane/ngx-charts'
 
 import {TrimInputModule} from '../../directives'
+import {PillModule} from '../../components/pill'
 
 import {
   LandingIntroComponent,
@@ -21,6 +22,7 @@ import {homeRoutes} from './home.routes'
 
 @NgModule({
   imports: [
+    PillModule,
     TrimInputModule,
     FlexLayoutModule,
     MatCardModule,
