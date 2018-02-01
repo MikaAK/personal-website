@@ -1,35 +1,37 @@
-h2.f2.tc Contact
+h2.f2.tc.roboto-slab.b.gray Contact
 
-mat-card.w-60.center
-  form(
+mat-card.center.mt5.mat-elevation-z5(ngClass.xs='w-80', ngClass.gt-xs='w-60')
+  form.pv3(
     novalidate,
     [formGroup]='contactGroup',
     (ngSubmit)='onSubmit(contactGroup.value)',
     fxLayout='column',
     fxLayoutAlign='space-between center'
   )
-    div(fxLayout, fxLayoutAlign='space-between')
-      input(
-        matInput,
-        mkTrimInput,
-        placeholder='Name',
-        formControlName='name'
-      )
+    .w-90(fxLayout='column', fxLayout.gt-xs, fxLayoutAlign='space-between')
+      mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
+        input(
+          matInput,
+          mkTrimInput,
+          placeholder='Name',
+          formControlName='name'
+        )
 
-      input(
-        matInput,
-        mkTrimInput,
-        placeholder='Email',
-        formControlName='email'
-      )
+      mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
+        input(
+          matInput,
+          mkTrimInput,
+          placeholder='Email',
+          formControlName='email'
+        )
 
-    div
-      textarea(
+    mat-form-field.w-90
+      textarea.h4(
         matInput,
         mkTrimInput,
         placeholder='Message',
         formControlName='message'
       )
 
-    .tc
-      button(mat-button, type='submit') Send
+    .tc.mt4.w-50
+      button.mat-button-padding.bg-washed-blue.white.w-100(mat-button, color='accent', type='submit') Send

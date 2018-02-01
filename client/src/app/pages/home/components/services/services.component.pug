@@ -1,35 +1,35 @@
-h2.f2.tc Services
+h2.f2.tc.roboto-slab.gray.b Services
 
-.w-100.ph6(fxLayoutAlign='center', fxLayoutGap='40px', fxLayoutWrap.lt-xs)
-  mat-card.h4.bg-dark-blue.white(fxLayout='column', fxLayoutAlign='center center', fxFlex='1')
-    div(fxFlex='40%', fxLayout='column', fxLayoutAlign='center center')
+.w-100.mt5(fxLayout='row wrap', fxLayoutAlign='center center', fxLayoutGap='30px')
+  mat-card.w-30.h4.bg-washed-blue.white.mat-elevation-z3(fxLayout='column')
+    div(fxLayout='column', fxLayoutAlign='center center')
       .w3
-        != require('assets/svg/frontend-icon.svg')
+        != require('assets/svg/frontend-white-icon.svg')
 
-      span.f5(fxLayout='center center') Frontend Development
+      span.f4.mt4(fxLayout='center center') Frontend Development
 
 
-    p.flex.items-center.flex-auto
+    p.mt4.f6.lh-copy
       | Let me help you create or fix your frontend application. React, AngularJS, Angular or just plain Javascript I can assist with any
 
-  mat-card(fxLayout='column', fxLayoutAlign='center center', fxFlex='1')
-    div(fxFlex='40%', fxLayout='column', fxLayoutAlign='center center')
+  mat-card.w-30.h4.mat-elevation-z3(fxLayout='column')
+    div(fxLayout='column', fxLayoutAlign='center center')
       .w3
         != require('assets/svg/gears.svg')
 
-      span.f5(fxLayout='center center') Build Setup/Troubleshooting
+      span.f4.mt4(fxLayout='center center') Build Setup/Troubleshooting
 
 
-    p.flex.items-center.flex-auto
+    p.mt4.f6.lh-copy
       | Need a fast backend? Build troubles? Let me debug them for you. Or let me setup your project. I can use Webpack, Gulp or in some cases just NPM scripts!
 
-  mat-card.bg-dark-blue.white(fxLayout='column', fxLayoutAlign='center center', fxFlex='1')
-    div(fxFlex='40%', fxLayout='column', fxLayoutAlign='center center')
+  mat-card.w-30.bg-washed-blue.white.h4.mat-elevation-z3(fxLayout='column')
+    div(fxLayout='column', fxLayoutAlign='center center')
       .w3
-        != require('assets/svg/backend-icon.svg')
+        != require('assets/svg/backend-white-icon.svg')
 
-      span.f5(fxLayout='center center') Backend Development
+      span.f4.mt4(fxLayout='center center') Backend Development
 
 
-    p.flex.items-center.flex-auto
+    p.mt4.f6.lh-copy
       | Need a fast backend? I can create high availability and fast backends with Elixir. Ditch REST for some new age GraphQL

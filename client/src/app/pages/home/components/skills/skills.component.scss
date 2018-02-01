@@ -1,2 +1,8 @@
 @import '~styles/utility';
 
+:host {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

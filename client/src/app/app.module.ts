@@ -1,6 +1,6 @@
+import {NgModule, APP_INITIALIZER} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {NgModule} from '@angular/core'
 import {HttpClientModule} from '@angular/common/http'
 import {RouterModule, PreloadAllModules} from '@angular/router'
 import {ServiceWorkerModule} from '@angular/service-worker'
@@ -21,6 +21,7 @@ import {CopyFooterModule} from './components/copy-footer'
 
 import {AppComponent} from './app.component'
 import {routes} from './app.routes'
+import {loadFonts} from './load-fonts'
 
 @NgModule({
   declarations: [
@@ -39,10 +40,10 @@ import {routes} from './app.routes'
     // StoreDevtoolsModule.instrument(<Partial<StoreDevtoolsConfig>>{name: 'Samacare Store Devtools'}),
     BrowserAnimationsModule,
     RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
     // LockerModule
   ],
-  providers: [],
+  providers: [{provide: APP_INITIALIZER, useFactory: loadFonts, multi: true},],
   bootstrap: [AppComponent]
 })
 export class AppModule {

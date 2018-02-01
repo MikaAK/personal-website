@@ -14,9 +14,9 @@ export type ContactInfo = {
 })
 export class ContactComponent {
   public contactGroup = this.fb.group({
-    name: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    message: ['', [Validators.required]]
+    name: ['', {updateOn: 'submit', validators: [Validators.required]}],
+    email: ['', {updateOn: 'submit', validators: [Validators.required, Validators.email]}],
+    message: ['', {updateOn: 'submit', validators: [Validators.required]}]
   })
 
   constructor(private fb: FormBuilder) { }

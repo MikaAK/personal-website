@@ -38,6 +38,7 @@
     "@ngrx/store-devtools": "^4.1.1",
     "@nicky-lenaers/ngx-scroll-to": "^0.5.0",
     "@swimlane/ngx-charts": "^7.0.1",
+    "@types/webfontloader": "^1.6.29",
     "angular-safeguard": "^2.0.1",
     "apollo-angular": "^1.0.0",
     "apollo-angular-link-http": "^1.0.1",
@@ -52,6 +53,7 @@
     "sass-em": "^1.0.3",
     "tachyons-sass": "^4.9.2",
     "web-animations-js": "^2.3.1",
+    "webfontloader": "^1.6.28",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

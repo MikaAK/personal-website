@@ -1,40 +1,42 @@
-.w-100.vh-65.bg-light-blue.ph5.pt5.pb3.trskY8.absolute.top-0.z-0
+.w-100.vh-65.bg-light-blue.ph5.pt5.pb3.trskY8.absolute.top-0.z-0.mat-elevation-z3
 
-.z-1(fxLayout, fxLayoutAlign='center center', fxLayoutWrap.gt-xs)
-  .pa4.tc.w-34.mw-m
-    img.w-100.br-100.dib(src='https://placeimg.com/500/500/people', alt='Profile Photo')
+.z-1.w-60(fxLayout, fxLayoutAlign='center center', fxLayout.xs='row wrap')
+  img.pa4.w-40.br-100.dib.mw-m(src='https://s3-us-west-2.amazonaws.com/mikakalathil.ca/images/misc/personal_image.jpeg', alt='Profile Photo')
 
-  div(fxLayout='column', fxLayoutAlign='center center')
+  .ml5(fxLayout='column', fxLayoutAlign='center start')
     .white
-      h1.f1 Mika Kalathil
+      h1.f0(ngClass.xs='tc') Mika Kalathil
 
-    .white(fxLayout)
-      h3.f3 Software Developer
+    .mt1.white(fxLayout, fxLayout.xs='column', fxFlex='1 1 auto')
+      h3.normal.software-title Software Developer
 
-      .w2
-        != require('assets/svg/octocat.svg')
+      div.dib(fxLayout.xs, fxLayoutAlign.xs='center')
+        a.icon-s(href='https://github.com/MikaAK', target='_blank')
+          != require('assets/svg/octocat.svg')
 
-      .w2
-        != require('assets/svg/linkedin.svg')
+        a.icon-s(href='https://ca.linkedin.com/in/mikakalathil', target='_blank')
+          != require('assets/svg/linkedin.svg')
 
-    button(mat-button, color='accent') Contact for Rates
+    .mt3.w-100
+      button.mat-button-padding--m.w-100.bg-washed-blue.white(mat-button, color='accent') Contact for Rates
 
 .w-100
-  mat-card.mw-l.bg-white.w-33.center(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
-   div(fxLayout='column', fxLayoutAlign='center center')
-     .w3
-      != require('assets/svg/backend-icon.svg')
+  mat-card.mw-l.bg-white.w-33.center.mat-elevation-z5
+   .ph3(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
+     a([ngx-scroll-to]="'#services'", fxLayout='column', fxLayoutAlign='center center')
+       .w3
+        != require('assets/svg/backend-icon.svg')
 
-     span Backend
+       span.f5.b.mt3([ngx-scroll-to]="'#backend-services'") Backend
 
-   div(fxLayout='column', fxLayoutAlign='center center')
-     .w3
-      != require('assets/svg/contract-icon.svg')
+     div(fxLayout='column', fxLayoutAlign='center center')
+       .w3
+        != require('assets/svg/contract-icon.svg')
 
-     span Accepting Contracts
+       span.f5.b.mt3 Accepting Contracts
 
-   div(fxLayout='column', fxLayoutAlign='center center')
-     .w3
-      != require('assets/svg/frontend-icon.svg')
+     a([ngx-scroll-to]="'#services'" fxLayout='column', fxLayoutAlign='center center')
+       .w3
+        != require('assets/svg/frontend-icon.svg')
 
-     span Frontend
+       span.f5.b.mt3 Frontend

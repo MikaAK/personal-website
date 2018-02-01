@@ -13,18 +13,18 @@ const removeNumbers = replace(/\d/g, '')
 })
 export class SkillsComponent {
   public frontendSkillsSchemes = {
-    domain: ['#F4E044', '#CE3336', '#7CD7F9']
+    domain: ['#7CD7F9', '#F4E044', '#CE3336']
   }
 
   public frontendSkills = [{
+    name: 'React',
+    value: 1
+  }, {
     name: 'Javascript',
     value: 2
   }, {
     name: 'Angular',
     value: 2
-  }, {
-    name: 'React',
-    value: 1
   }]
 
   public miscSkillsSchemes = {

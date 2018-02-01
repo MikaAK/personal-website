@@ -1,5 +1,13 @@
 @import '~styles/utility';
 
-:host /deep/ mat-card {
-  min-width: 325px;
+:host {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  /deep/ mat-card {
+    min-width: 305px;
+    max-width: 390px;
+  }
 }
