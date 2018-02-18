@@ -1,4 +1,9 @@
 @import '~styles/utility';
+@import '~breakpoint-sass';
+
+$max-status-width-point: max-width 540px;
+$single-column-point: 745px;
+$up-to-single-column-point: max-width $single-column-point - 1;
 
 :host {
   display: flex;
@@ -12,4 +17,40 @@
 
 .software-title {
   font-size: 2rem;
+}
+
+.landing-intro_opening {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint($up-to-single-column-point) {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .landing-intro_opening_text {
+    justify-content: center;
+
+    @include breakpoint($single-column-point) {
+      margin-left: 3rem;
+    }
+
+    @include breakpoint($up-to-single-column-point) {
+      margin-top: 1rem;
+      align-items: center;
+    }
+  }
+}
+
+.landing-intro_status-cards {
+  @include breakpoint($up-to-single-column-point) {
+    margin-top: 2rem;
+  }
+
+  mat-card {
+    @include breakpoint(max-width $single-column-point) {
+      max-width: 450px;
+    }
+  }
 }

@@ -1,18 +1,18 @@
 h2.f2.tc.roboto-slab.b.gray Skills
 
 .ph6(fxLayout='row wrap', fxLayoutAlign='center center')
-  .mw-l(fxFlex='33%')
+  .mw-l.ph3
     ngx-charts-pie-chart(
-      [view]='[400, 400]',
+      [view]='[500, 400]',
       [scheme]='frontendSkillsSchemes',
       [results]='frontendSkills',
       [tooltipText]='stripNumbers',
       [labels]='true'
     )
 
-  .mw-l(fxFlex='33%')
+  .mw-l.ph3
     ngx-charts-pie-chart(
-      [view]='[400, 400]',
+      [view]='[500, 400]',
       [scheme]='miscSkillsSchemes',
       [results]='miscSkills',
       [labelFormatting]='edgeCaseLabelFormat',
@@ -20,9 +20,9 @@ h2.f2.tc.roboto-slab.b.gray Skills
       [labels]='true'
     )
 
-  .mw-l(fxFlex='33%')
+  .mw-l.ph3
     ngx-charts-pie-chart(
-      [view]='[400, 400]',
+      [view]='[500, 400]',
       [scheme]='backendSkillsSchemes',
       [results]='backendSkills',
       [tooltipText]='stripNumbers',

@@ -2,7 +2,11 @@ import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 import {RouterModule} from '@angular/router'
 import {ReactiveFormsModule} from '@angular/forms'
-import {MatToolbarModule, MatButtonModule, MatCardModule, MatInputModule, MatFormFieldModule} from '@angular/material'
+import {
+  MatToolbarModule, MatButtonModule,
+  MatCardModule, MatInputModule,
+  MatFormFieldModule
+} from '@angular/material'
 import {FlexLayoutModule} from '@angular/flex-layout'
 import {PieChartModule} from '@swimlane/ngx-charts'
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to'
