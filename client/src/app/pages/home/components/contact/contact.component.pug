@@ -2,6 +2,7 @@ h2.f2.tc.roboto-slab.b.gray Contact
 
 mat-card.center.mt5.mat-elevation-z5(ngClass.xs='w-80', ngClass.gt-xs='w-60')
   form.pv3(
+    #form='ngForm',
     novalidate,
     [formGroup]='contactGroup',
     (ngSubmit)='onSubmit(contactGroup.value)',
@@ -12,26 +13,47 @@ mat-card.center.mt5.mat-elevation-z5(ngClass.xs='w-80', ngClass.gt-xs='w-60')
       mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
         input(
           matInput,
-          mkTrimInput,
+          [readonly]='didSendEmail',
           placeholder='Name',
-          formControlName='name'
+          [formControl]='name'
         )
+
+        mat-error Name is required
 
       mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
         input(
           matInput,
-          mkTrimInput,
+          [readonly]='didSendEmail',
           placeholder='Email',
-          formControlName='email'
+          [formControl]='email'
         )
+
+        mat-error {{ emailErrorMessage }}
 
     mat-form-field.w-90
       textarea.h4(
         matInput,
-        mkTrimInput,
+        [readonly]='didSendEmail',
         placeholder='Message',
-        formControlName='message'
+        [formControl]='message'
       )
+      mat-error Message is required
 
     .tc.mt4.w-50
-      button.mat-button-padding.bg-washed-blue.white.w-100(mat-button, color='accent', type='submit') Send
+      button.mat-button-padding.bg-washed-blue.white.w-100(
+        mat-button,
+        color='accent',
+        type='submit',
+        [disabled]='didSendEmail || isSendingEmail'
+      )
+        div(*ngIf='!didSendEmail; else sentEmail', fxLayout, fxLayoutAlign='center center')
+          span {{ isSendingEmail ? 'Sending' : 'Send' }}
+          mat-spinner.ml2(*ngIf='isSendingEmail', [diameter]='20')
+
+ng-template(#sentEmail)
+  div(fxLayout, fxLayoutAlign='center center')
+    span Sent
+
+    .icon-xs.green.ml2
+      != require('assets/svg/checkmark.svg')
+

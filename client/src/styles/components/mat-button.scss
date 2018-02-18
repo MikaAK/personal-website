@@ -1,3 +1,7 @@
+.mat-button {
+  transition: background-color .2s ease-in-out;
+}
+
 .mat-button.white .mat-button-wrapper {
   color: white;
 }
@@ -10,4 +14,13 @@
 .mat-button.mat-button-padding--m {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.mat-button.white:disabled {
+  background-color: $gray;
+  cursor: not-allowed;
+
+  .mat-button-focus-overlay {
+    background-color: transparent;
+  }
 }

@@ -1,14 +1,22 @@
 @import '~styles/utility';
+@import '~breakpoint-sass';
 
 :host {
-  @media screen and (max-width: 600px) {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 99999;
-  }
+  z-index: 99999;
 
   .mat-toolbar {
     height: $mat-toolbar-height;
+
+    @include breakpoint($navbar-layout-switch) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @include breakpoint(max-width $navbar-layout-switch - 1) {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
   }
 }

@@ -5,7 +5,7 @@ import {ReactiveFormsModule} from '@angular/forms'
 import {
   MatToolbarModule, MatButtonModule,
   MatCardModule, MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule, MatProgressSpinnerModule
 } from '@angular/material'
 import {FlexLayoutModule} from '@angular/flex-layout'
 import {PieChartModule} from '@swimlane/ngx-charts'
@@ -19,7 +19,8 @@ import {
   ServicesComponent,
   ContactComponent,
   SkillsComponent,
-  ProjectsComponent
+  ProjectsComponent,
+  ContactService
 } from './components'
 
 import {HomeComponent} from './home.component'
@@ -38,10 +39,12 @@ import {homeRoutes} from './home.routes'
     MatButtonModule,
     PieChartModule,
     ScrollToModule,
+    MatProgressSpinnerModule,
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(homeRoutes)
   ],
+  providers: [ContactService],
   declarations: [
     ContactComponent,
     SkillsComponent,
