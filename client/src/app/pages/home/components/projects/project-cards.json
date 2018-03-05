@@ -1,0 +1,52 @@
+[{
+  "title": "Edvisor",
+  "imageUrl": "https://placeimg.com/380/215/tech",
+  "tags": [{
+    "name": "Elixir",
+    "color": "purple"
+  }, {
+    "name": "Ramda",
+    "color": "yellow"
+  }, {
+    "name": "AngularJS",
+    "color": "red"
+  }, {
+    "name": "Angular",
+    "color": "red"
+  }, {
+    "name": "Phoenix",
+    "color": "purple"
+  }, {
+    "color": "yellow",
+    "name": "Javascript"
+  }]
+}, {
+  "title": "Dropcuff",
+  "imageUrl": "https://placeimg.com/380/215/tech",
+  "tags": [{
+    "name": "Elixir",
+    "color": "purple"
+  }, {
+    "name": "Ramda",
+    "color": "yellow"
+  }, {
+    "name": "Angular",
+    "color": "red"
+  }, {
+    "name": "Phoenix",
+    "color": "purple"
+  }, {
+    "color": "yellow",
+    "name": "Javascript"
+  }]
+}, {
+  "title": "Food.ee",
+  "imageUrl": "https://placeimg.com/380/215/tech",
+  "tags": [{
+    "name": "AngularJS",
+    "color": "red"
+  }, {
+    "color": "yellow",
+    "name": "Javascript"
+  }]
+}]

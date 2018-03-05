@@ -1,8 +1,23 @@
 @import '~styles/utility';
+@import '~breakpoint-sass';
+
+$skills-column-width-size: 560px;
+$skills-column-width-second-size: 735px;
 
 :host {
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.mk-skills_chart {
+  @include breakpoint(max-width $skills-column-width-size + 1) {
+    width: 100%;
+  }
+
+
+  @include breakpoint($skills-column-width-size $skills-column-width-second-size + 1) {
+    width: 75%;
+  }
 }

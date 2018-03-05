@@ -1,7 +1,7 @@
 h2.f2.tc.roboto-slab.b.gray Skills
 
-.ph2(fxLayout='row wrap', fxLayoutAlign='center center')
-  .vh-50(ngClass.gt-xs='mw-xl', ngClass.lt-sm='mw-l')
+.ph2.overflow-hidden(fxLayout='row wrap', fxLayoutAlign='center center')
+  .mk-skills_chart.vh-50(ngClass.gt-xs='mw-xl', ngClass.lt-sm='mw-l')
     ngx-charts-pie-chart(
       [scheme]='frontendSkillsSchemes',
       [results]='frontendSkills',
@@ -9,7 +9,7 @@ h2.f2.tc.roboto-slab.b.gray Skills
       [labels]='true'
     )
 
-  .vh-50(ngClass.gt-xs='mw-xl', ngClass.lt-sm='mw-l')
+  .mk-skills_chart.vh-50(ngClass.gt-xs='mw-xl', ngClass.lt-sm='mw-l')
     ngx-charts-pie-chart(
       [scheme]='miscSkillsSchemes',
       [results]='miscSkills',
@@ -18,7 +18,7 @@ h2.f2.tc.roboto-slab.b.gray Skills
       [labels]='true'
     )
 
-  .vh-50(ngClass.gt-xs='mw-xl', ngClass.lt-sm='mw-l')
+  .mk-skills_chart.vh-50(ngClass.gt-xs='mw-xl', ngClass.lt-sm='mw-l')
     ngx-charts-pie-chart(
       [scheme]='backendSkillsSchemes',
       [results]='backendSkills',

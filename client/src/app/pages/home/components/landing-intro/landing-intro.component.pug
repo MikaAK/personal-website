@@ -29,23 +29,23 @@
         ngx-scroll-to='#contact'
       ) Contact for Rates
 
-.w-100.ph3.landing-intro_status-cards
+.w-100.landing-intro_status-cards
   mat-card.mw7.bg-white.center.mat-elevation-z5
    .ph3(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
      a([ngx-scroll-to]="'#services'", fxLayout='column', fxLayoutAlign='center center')
        .w3
-        != require('assets/svg/backend-icon.svg')
+         != require('assets/svg/backend-icon.svg')
 
        span.f5.b.mt3.tc(ngx-scroll-to="#backend-services") Backend
 
      div(fxLayout='column', fxLayoutAlign='center center')
-       .w3
-        != require('assets/svg/contract-icon.svg')
+       .w3([ngClass]='isAcceptingContracts ? "green" : "red"')
+         != require('assets/svg/contract-icon.svg')
 
-       span.f5.b.mt3.tc Accepting Contracts
+       span.f5.b.mt3.tc {{ isAcceptingContracts ? '' : 'Not ' }}Accepting Contracts
 
      a(ngx-scroll-to="#services", fxLayout='column', fxLayoutAlign='center center')
        .w3
-        != require('assets/svg/frontend-icon.svg')
+         != require('assets/svg/frontend-icon.svg')
 
        span.f5.b.mt3.tc(ngx-scroll-to="#frontend-services") Frontend

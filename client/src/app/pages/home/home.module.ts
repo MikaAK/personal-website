@@ -13,6 +13,7 @@ import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to'
 
 import {TrimInputModule, ClassOnHoverModule} from '../../directives'
 import {PillModule} from '../../components/pill'
+import {BackgroundPolyModule} from '../../components/background-poly'
 
 import {
   LandingIntroComponent,
@@ -20,6 +21,7 @@ import {
   ContactComponent,
   SkillsComponent,
   ProjectsComponent,
+  ProjectCardComponent,
   ContactService
 } from './components'
 
@@ -29,6 +31,7 @@ import {homeRoutes} from './home.routes'
 @NgModule({
   imports: [
     PillModule,
+    BackgroundPolyModule,
     ClassOnHoverModule,
     TrimInputModule,
     FlexLayoutModule,
@@ -51,6 +54,7 @@ import {homeRoutes} from './home.routes'
     ServicesComponent,
     ProjectsComponent,
     LandingIntroComponent,
+    ProjectCardComponent,
     HomeComponent
   ]
 })

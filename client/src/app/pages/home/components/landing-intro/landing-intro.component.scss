@@ -10,9 +10,9 @@ $up-to-single-column-point: max-width $single-column-point - 1;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  min-height: calc(100vh - #{$mat-toolbar-height});
   position: relative;
   overflow: hidden;
+  min-height: calc(100vh - #{$mat-toolbar-height});
 }
 
 .software-title {
@@ -51,6 +51,12 @@ $up-to-single-column-point: max-width $single-column-point - 1;
   mat-card {
     @include breakpoint(max-width $single-column-point) {
       max-width: 450px;
+    }
+  }
+
+  .landing-intro_card-icon {
+    @include breakpoint(max-width $single-column-point) {
+      width: 3rem;
     }
   }
 }

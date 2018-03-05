@@ -1,63 +1,9 @@
 h2.f2.tc.roboto-slab.b.gray Projects
 
-.w-100.mt5.ph4.mxw-xxxl.center(fxLayout='row wrap', fxLayoutAlign='space-around center')
-  mat-card.mh1.w-30.mv3.mat-card-no-padding(
-    fxLayout='column',
-    mkClassOnHover='mat-elevation-z5',
-    mkClassOffHover='mat-elevation-z3'
+.w-100.mt5.ph3.mxw-xxxl.center(fxLayout='row wrap', fxLayoutAlign='space-around center')
+  mk-project-card.w-30.mh2.mv3(
+    *ngFor='let project of projectCards',
+    [title]='project.title',
+    [imageUrl]='project.imageUrl',
+    [tags]='project.tags'
   )
-    img.w-100(src='https://placeimg.com/380/215/tech')
-
-    h5.f3.tc.mt3 Food.ee
-
-    .pv3.ph5(
-      fxFlex='1 1 auto',
-      fxLayout='row wrap',
-      fxLayoutGap='5px',
-      fxLayoutAlign='center center'
-    )
-      mk-pill(backgroundColor='yellow') Javascript
-      mk-pill(backgroundColor='red') AngularJS
-
-  mat-card.mh1.w-30.mv3.mat-card-no-padding(
-    fxLayout='column',
-    mkClassOnHover='mat-elevation-z5',
-    mkClassOffHover='mat-elevation-z3'
-  )
-    img.w-100(src='https://placeimg.com/380/215/tech')
-
-    h5.f3.tc.mt3 Dropcuff
-
-    .pv3.ph5(
-      fxFlex='1 1 auto',
-      fxLayout='row wrap',
-      fxLayoutGap='5px',
-      fxLayoutAlign='center center'
-    )
-      mk-pill(backgroundColor='purple') Elixir
-      mk-pill(backgroundColor='yellow') Ramda
-      mk-pill(backgroundColor='red') Angular
-      mk-pill(backgroundColor='purple') Phoenix
-      mk-pill(backgroundColor='yellow') Javascript
-
-  mat-card.mh1.w-30.mv3.mat-card-no-padding(
-    fxLayout='column',
-    mkClassOnHover='mat-elevation-z5',
-    mkClassOffHover='mat-elevation-z3'
-  )
-    img.w-100(src='https://placeimg.com/380/215/tech')
-
-    h5.f3.tc.mt3 Edvisor
-
-    .pv3.ph5(
-      fxFlex='1 1 auto',
-      fxLayout='row wrap',
-      fxLayoutGap='5px',
-      fxLayoutAlign='center center'
-    )
-      mk-pill(backgroundColor='purple') Elixir
-      mk-pill(backgroundColor='yellow') Ramda
-      mk-pill(backgroundColor='red') AngularJS
-      mk-pill(backgroundColor='red') Angular
-      mk-pill(backgroundColor='purple') Phoenix
-      mk-pill(backgroundColor='yellow') Javascript

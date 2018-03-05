@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core'
 import {Observable} from 'rxjs/Observable'
-import * as AWS from 'aws-sdk'
+import {map as rxMap, switchMap} from 'rxjs/operators'
+import {fromPromise} from 'rxjs/observable/fromPromise'
+import {Lambda} from 'aws-sdk'
 
 export const COGNITO_POOL_ID = 'us-west-2:72c055c5-e4ba-4ae1-9223-e1a616eb1a18'
 export const LAMBDA_VERSION = '2015-03-31'
@@ -17,20 +19,11 @@ export interface SendEmailParams {
   message: string
 }
 
-AWS.config.region = LAMBDA_REGION
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: COGNITO_POOL_ID})
-
 @Injectable()
 export class ContactService {
-  private lambda = new AWS.Lambda({
-    apiVersion: LAMBDA_VERSION,
-    region: LAMBDA_REGION
-  })
-
-  constructor() {  }
-
   public sendEmail(sendParams: SendEmailParams) {
-    return this.lambdaFunctionToObservable(sendParams)
+    return this.connectToLambda()
+      .pipe(switchMap((lambda) => this.lambdaFunctionToObservable(lambda, sendParams)))
   }
 
   private makeLambdaParams(params: SendEmailParams) {
@@ -40,9 +33,9 @@ export class ContactService {
     }
   }
 
-  private lambdaFunctionToObservable(params: SendEmailParams) {
+  private lambdaFunctionToObservable(lambda: Lambda, params: SendEmailParams) {
     return new Observable((observer) => {
-      this.lambda.invoke(this.makeLambdaParams(params), (error, data) => {
+      lambda.invoke(this.makeLambdaParams(params), (error, data) => {
         if (error) {
           observer.error(error)
         } else {
@@ -51,5 +44,20 @@ export class ContactService {
         }
       })
     })
+  }
+
+  private connectToLambda() {
+    return fromPromise(import('aws-sdk'))
+      .pipe(
+        rxMap(({config, Lambda, CognitoIdentityCredentials}) => {
+          config.region = LAMBDA_REGION
+          config.credentials = new CognitoIdentityCredentials({IdentityPoolId: COGNITO_POOL_ID})
+
+          return new Lambda({
+            apiVersion: LAMBDA_VERSION,
+            region: LAMBDA_REGION
+          })
+        })
+      )
   }
 }

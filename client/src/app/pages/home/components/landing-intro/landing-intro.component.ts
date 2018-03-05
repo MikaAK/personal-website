@@ -6,4 +6,5 @@ import {Component} from '@angular/core'
   styleUrls: ['./landing-intro.component.scss']
 })
 export class LandingIntroComponent {
+  public isAcceptingContracts = true
 }
