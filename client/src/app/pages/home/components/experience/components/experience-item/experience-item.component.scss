@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  justify-content: center;
+
+
+  .mat-toolbar-single-row {
+    height: 50px;
+  }
+}
+
+
+.experience-item_svg-item {
+  margin-top: 65px;
+  min-width: 345px;
+}
+
+.experience-item_circle-inner,
+.experience-item_circle-outer {
+  transform-origin: 12px 12px;
+}
+
+.experience-item_arm-right,
+.experience-item_arm-left {
+  stroke-dasharray: 111;
+}
+
+.experience-item_line-down {
+  stroke-dasharray: 73;
+}

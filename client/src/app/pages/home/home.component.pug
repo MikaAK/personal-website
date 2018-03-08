@@ -1,9 +1,12 @@
 mk-landing-intro.pb3.ph3#home
 
 
-mk-background-poly
+mk-background-poly([bottomLeftModifier]='50')
   mk-services#services
-  mk-skills.mt5
+  mk-experience.mt5.db
 
-mk-projects.mt5#portfolio
-mk-contact.db.mt5#contact
+mk-skills.mt5
+
+mk-background-poly(reversed, [heightModifier]='0')
+  mk-projects.mt5#portfolio
+  mk-contact.db.mt5#contact

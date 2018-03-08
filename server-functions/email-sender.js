@@ -9,7 +9,7 @@ const createEmailParams = ({senderEmail, senderName, message}) => ({
   Message: {
     Subject: {
       Charset: 'UTF-8',
-      Data: `New message from ${senderName} - ${senderEmail}`
+      Data: `New Personal Website message from ${senderName} - ${senderEmail}`
     },
     Body: {
       Html: {

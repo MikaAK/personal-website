@@ -1,62 +1,63 @@
 h2.f2.tc.roboto-slab.b.gray Contact
 
-mat-card.center.mt5.mat-elevation-z5(ngClass.xs='w-80', ngClass.gt-xs='w-60')
-  form.pv3(
-    #form='ngForm',
-    novalidate,
-    [formGroup]='contactGroup',
-    (ngSubmit)='onSubmit(contactGroup.value)',
-    fxLayout='column',
-    fxLayoutAlign='space-between center'
-  )
-    .w-90(fxLayout='column', fxLayout.gt-xs, fxLayoutAlign='space-between')
-      mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
-        input(
+.contact_container((eleInView)='onEleInView()')
+  mat-card.center.mt5.mat-elevation-z5(*ngIf='isInView', ngClass.xs='w-80', ngClass.gt-xs='w-60')
+    form.pv3(
+      #form='ngForm',
+      novalidate,
+      [formGroup]='contactGroup',
+      (ngSubmit)='onSubmit(contactGroup.value)',
+      fxLayout='column',
+      fxLayoutAlign='space-between center'
+    )
+      .w-90(fxLayout='column', fxLayout.gt-xs, fxLayoutAlign='space-between')
+        mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
+          input(
+            matInput,
+            mkTrimInput,
+            [readonly]='didSendEmail',
+            placeholder='Name',
+            formControlName='name'
+          )
+
+          mat-error Name is required
+
+        mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
+          input(
+            matInput,
+          mkTrimInput,
+            [readonly]='didSendEmail',
+            placeholder='Email',
+            formControlName='email'
+          )
+
+          mat-error {{ emailErrorMessage }}
+
+      mat-form-field.w-90.mt2
+        textarea.h4(
           matInput,
           mkTrimInput,
           [readonly]='didSendEmail',
-          placeholder='Name',
-          formControlName='name'
+          placeholder='Message',
+          formControlName='message'
         )
+        mat-error Message is required
 
-        mat-error Name is required
-
-      mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
-        input(
-          matInput,
-        mkTrimInput,
-          [readonly]='didSendEmail',
-          placeholder='Email',
-          formControlName='email'
+      .tc.mt4.w-50
+        button.mat-button-padding.bg-washed-blue.white.w-100(
+          mat-button,
+          color='accent',
+          type='submit',
+          [disabled]='(form.submitted && contactGroup.invalid) || didSendEmail || isSendingEmail'
         )
+          div(*ngIf='!didSendEmail; else sentEmail', fxLayout, fxLayoutAlign='center center')
+            span(*ngIf='!isSendingEmail') Send
+            mat-spinner.ml2.mv2(*ngIf='isSendingEmail', [diameter]='20')
 
-        mat-error {{ emailErrorMessage }}
+  ng-template(#sentEmail)
+    div(fxLayout, fxLayoutAlign='center center')
+      span Sent
 
-    mat-form-field.w-90.mt2
-      textarea.h4(
-        matInput,
-        mkTrimInput,
-        [readonly]='didSendEmail',
-        placeholder='Message',
-        formControlName='message'
-      )
-      mat-error Message is required
-
-    .tc.mt4.w-50
-      button.mat-button-padding.bg-washed-blue.white.w-100(
-        mat-button,
-        color='accent',
-        type='submit',
-        [disabled]='(form.submitted && contactGroup.invalid) || didSendEmail || isSendingEmail'
-      )
-        div(*ngIf='!didSendEmail; else sentEmail', fxLayout, fxLayoutAlign='center center')
-          span(*ngIf='!isSendingEmail') Send
-          mat-spinner.ml2.mv2(*ngIf='isSendingEmail', [diameter]='20')
-
-ng-template(#sentEmail)
-  div(fxLayout, fxLayoutAlign='center center')
-    span Sent
-
-    .icon-xs.washed-green.ml2
-      != require('assets/svg/checkmark.svg')
+      .icon-xs.washed-green.ml2
+        != require('assets/svg/checkmark.svg')
 

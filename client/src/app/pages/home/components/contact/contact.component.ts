@@ -1,4 +1,5 @@
-import {Component} from '@angular/core'
+import {Component, HostBinding} from '@angular/core'
+import {trigger, transition, query, style, stagger, animate} from '@angular/animations'
 import {FormBuilder, Validators} from '@angular/forms'
 import {catchError, mapTo as rxMapTo} from 'rxjs/operators'
 import {of as rxOf} from 'rxjs/observable/of'
@@ -11,12 +12,31 @@ export type ContactInfo = {
   message: string
 }
 
+const ANIMATION_TIME = 750
+
 @Component({
   selector: 'mk-contact',
   templateUrl: './contact.component.pug',
-  styleUrls: ['./contact.component.scss']
+  styles: ['.contact_container { min-height: 405px; }'],
+  animations: [
+    trigger('contactAnimation', [
+      transition('* => *', [
+        query('mat-card', [
+          style({opacity: 0, transform: 'translateY(40%)'}),
+
+          stagger(ANIMATION_TIME * 1.25, [
+            animate(`${ANIMATION_TIME}ms cubic-bezier(0.0, 0.0, 0.2, 1)`, style({
+              opacity: 1,
+              transform: 'translateY(0)'
+            }))
+          ])
+        ], {optional: true})
+      ])
+    ])
+  ]
 })
 export class ContactComponent {
+  @HostBinding('@contactAnimation') public isInView = false
   public isSendingEmail = false
   public didSendEmail = false
   public contactGroup = this.fb.group({
@@ -64,5 +84,9 @@ export class ContactComponent {
           this.didSendEmail = didSendEmail
         })
     }
+  }
+
+  public onEleInView() {
+    this.isInView = true
   }
 }

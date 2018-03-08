@@ -12,4 +12,12 @@
     max-width: 390px;
     min-height: 390px;
   }
+
+  /deep/ mk-project-card {
+    opacity: 1;
+  }
+
+  .project-card_container {
+    min-height: 390px;
+  }
 }

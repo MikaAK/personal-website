@@ -1,0 +1,29 @@
+[{
+  "title": "The Journey Begins",
+  "date": "July 2013",
+  "content": "I started learning how to code! First with C++, then C# and finally moving onto HTML/CSS, Javascript and Ruby on Rails"
+}, {
+  "title": "Lighthouse Labs",
+  "date": "June 2014 - Aug 2014",
+  "content": "At Lighthouse Labs I earned my Immersive Web Development Diploma as a first step in my development career"
+}, {
+  "title": "Food.ee",
+  "date": "Aug 2014 - Oct 2014",
+  "content": "At Food.ee I got hands on experience developing an AngularJS app from scratch. I rebuilt the app without replacing the css or html just completely replacing the javascript"
+}, {
+  "title": "Dropcuff",
+  "date": "Aug 2015 - Present",
+  "content": "Dropcuff is a startup of which I am working on, we're a team of 3 aiming to change the music industry as we know it"
+}, {
+  "title": "NRG eSports",
+  "date": "Jan 2017 - Oct 2017",
+  "content": "At NRG I created a high availability backend with Elixir using Absinthe and Phoenix. I also helped frontside in Angular to implement features"
+}, {
+  "title": "Samacare",
+  "date": "Nov 2017 - March 2018",
+  "content": "During my time at Samacare I archetected a backend application with Elixir and a frontend PWA with Angular"
+}, {
+  "title": "Self-Employed",
+  "date": "Jan 2017 - Present",
+  "content": "With NRG eSports I became a contractor. I work out of my own company and take contracts that are interesting! Contact me if you have a project that needs working on"
+}]

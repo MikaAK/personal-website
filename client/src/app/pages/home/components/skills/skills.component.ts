@@ -12,6 +12,7 @@ const removeNumbers = replace(/\d/g, '')
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
+  public isInView = false
   public frontendSkillsSchemes = {
     domain: ['#7CD7F9', '#F4E044', '#CE3336']
   }
@@ -69,5 +70,9 @@ export class SkillsComponent {
 
   public stripNumbers(value: {data: {name: string}}) {
     return removeNumbers(value.data.name)
+  }
+
+  public onEleInView() {
+    this.isInView = true
   }
 }

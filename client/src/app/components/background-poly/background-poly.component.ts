@@ -8,7 +8,8 @@ const MEDIUM_SCREEN_WIDTH = 1310
 
 @Component({
   selector: 'mk-background-poly',
-  templateUrl: './background-poly.component.pug'
+  templateUrl: './background-poly.component.pug',
+  styles: [`:host[reversed] svg { transform: rotate(180deg); }`]
 })
 export class BackgroundPolyComponent implements AfterViewInit {
   @Input() public color = '#F5F5F5'
