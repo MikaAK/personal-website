@@ -13,3 +13,4 @@ interface NodeModule {
 declare module '*.json';
 declare module '*.graphql';
 declare module 'lodash.words';
+declare module 'idle-promise';

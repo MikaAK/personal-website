@@ -11,7 +11,7 @@ const STEP_TIME = (ANIMATION_BOUNCE_TIME / 2) + ANIMATION_LINE_DOWN_TIME
 @Component({
   selector: 'mk-experience',
   templateUrl: './experience.component.pug',
-  styles: [':host /deep/ mk-experience-item:not(:first-of-type) { margin-top: -85px; }'],
+  styles: ['.experience_container { min-height: 995px; }'],
   animations: [
     trigger('animationRunning', [
       transition('false => true', [

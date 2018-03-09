@@ -1,22 +1,55 @@
-import {Component, Input} from '@angular/core'
+import {Component, Input, OnDestroy} from '@angular/core'
+import {MediaChange, ObservableMedia} from '@angular/flex-layout'
+import {Subscription} from 'rxjs/Subscription'
 
 @Component({
   selector: 'mk-experience-item',
   templateUrl: './experience-item.component.pug',
   styleUrls: ['./experience-item.component.scss']
 })
-export class ExperienceItemComponent {
+export class ExperienceItemComponent implements OnDestroy {
   @Input() public title: string
   @Input() public content: string
   @Input() public date: string
   @Input() public direction: 'left' | 'right' = 'left'
   @Input() public hideTail = false
 
+  public isMobile = false
+  public isExtraSmall = false
+  public sub: Subscription
+
+  public get currentDirection() {
+    return this.isMobile ? 'right' : this.direction
+  }
+
   public get isDirectionLeft() {
-    return this.direction === 'left'
+    return this.currentDirection === 'left'
   }
 
   public get isDirectionRight() {
-    return this.direction === 'right'
+    return this.currentDirection === 'right'
+  }
+
+  public get viewBoxPath() {
+    const length = this.isExtraSmall ? '230' : '260'
+
+    return `0 0 ${length} 114`
+  }
+
+  public get rightArmPath() {
+    const length = this.isExtraSmall ? '230' : '260'
+
+    return `M157 25l30.806-24H${length}`
+  }
+
+  constructor(private media: ObservableMedia) {
+    this.sub = this.media.subscribe((change: MediaChange) => {
+      this.isMobile = change.mqAlias === 'xs' || change.mqAlias === 'sm'
+      this.isExtraSmall = change.mqAlias === 'xs'
+    })
+  }
+
+  public ngOnDestroy() {
+    this.sub.unsubscribe()
   }
 }

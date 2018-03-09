@@ -1,9 +1,23 @@
 import {Component, HostBinding} from '@angular/core'
 import {trigger, transition, query, style, stagger, animate} from '@angular/animations'
+import {compose, prop} from 'ramda'
 
 import * as projectCards from './project-cards.json'
 
 const ANIMATION_TIME = 300
+
+const constructImage = (url: string) => import('idle-promise')
+  .then((idlePromise) => idlePromise())
+  .then(() => {
+    const img = new Image()
+
+    img.src = url
+
+    return img
+  })
+
+const createImageFromUrl = compose(constructImage, prop('imageUrl'))
+const preloadImages = () => projectCards.forEach(createImageFromUrl)
 
 @Component({
   selector: 'mk-projects',
@@ -32,5 +46,9 @@ export class ProjectsComponent {
 
   public onEleInView() {
     this.isInView = true
+  }
+
+  public ngAfterViewInit() {
+    preloadImages()
   }
 }

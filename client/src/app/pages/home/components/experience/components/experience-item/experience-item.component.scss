@@ -1,17 +1,43 @@
+@import '~breakpoint-sass';
+
+$hide-svg-width: 550px;
+
 :host {
   display: flex;
   justify-content: center;
-
+  max-width: 1300px;
+  margin: 0 auto;
 
   .mat-toolbar-single-row {
     height: 50px;
   }
-}
 
+  &:not(:first-of-type) {
+    @include breakpoint(max-width $hide-svg-width) {
+      margin-top: 1.5rem;
+    }
+
+    @include breakpoint($hide-svg-width - 1) {
+      margin-top: -85px;
+    }
+  }
+}
 
 .experience-item_svg-item {
   margin-top: 65px;
   min-width: 345px;
+
+  @include breakpoint(max-width $hide-svg-width) {
+    display: none;
+  }
+
+  &.move-left-mobile {
+    margin-left: -25%;
+  }
+
+  &.move-left-extra-small {
+    margin-left: -35%;
+  }
 }
 
 .experience-item_circle-inner,

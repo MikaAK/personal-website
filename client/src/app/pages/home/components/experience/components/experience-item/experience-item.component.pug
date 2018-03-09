@@ -1,15 +1,9 @@
-.mxw-l.w-30(*ngIf='isDirectionRight', fxFlex='1 1 auto')
+.mxw-l.w-30(*ngIf='isDirectionRight', fxFlex='1 1 auto', fxHide, fxShow.gt-sm)
 
 .mxw-l.w-30(*ngIf='isDirectionLeft', fxFlex='1 1 auto')
-  mat-card.mat-card-no-padding.mat-elevation-z5(fxLayout='column')
-    mat-toolbar.bg-washed-blue.white(fxLayout, fxLayoutAlign='space-between center')
-      span.f5 {{ title }}
-      span.f6 {{ date }}
+  ng-container(*ngTemplateOutlet='card')
 
-    .ph3.pv3(fxFlex='1 1 auto', fxLayout, fxLayoutAlign='center center')
-      p.lh-copy.f6 {{ content }}
-
-svg.w-30.experience-item_svg-item.mh2(viewBox='0 0 260 114', xmlns='http://www.w3.org/2000/svg')
+svg.w-30.experience-item_svg-item.mh2([attr.viewBox]='viewBoxPath', xmlns='http://www.w3.org/2000/svg', ngClass.sm='move-left-mobile', ngClass.xs='move-left-extra-small')
   g.experience-item_circle(transform='translate(118 15)')
     circle.experience-item_circle-outer(
       fill='transparent',
@@ -36,7 +30,7 @@ svg.w-30.experience-item_svg-item.mh2(viewBox='0 0 260 114', xmlns='http://www.w
   )
 
   path.experience-item_arm-right(
-    d='M157 25l30.806-24H260',
+    [attr.d]='rightArmPath',
     fill-opacity='0',
     stroke='#607D8B',
     stroke-width='2',
@@ -44,22 +38,24 @@ svg.w-30.experience-item_svg-item.mh2(viewBox='0 0 260 114', xmlns='http://www.w
   )
 
   path.experience-item_line-down(
-    d='M130 40.2l.5 72.796',
+    d='M130 40v73',
     stroke='#D8D8D8',
-    stroke-width='3',
+    stroke-width='2' ,
     stroke-linecap='square',
     *ngIf='!hideTail'
   )
 
 
-.mxw-l.w-30(*ngIf='isDirectionLeft', fxFlex='1 1 auto')
+.mxw-l.w-30(*ngIf='isDirectionLeft', fxFlex='1 1 auto', fxHide, fxShow.gt-sm)
 
 .mxw-l.w-30(*ngIf='isDirectionRight', fxFlex='1 1 auto')
+  ng-container(*ngTemplateOutlet='card')
+
+ng-template(#card)
   mat-card.mat-card-no-padding.mat-elevation-z5(fxLayout='column')
-    mat-toolbar.bg-washed-blue.white(fxLayout, fxLayoutAlign='space-between center')
+    mat-toolbar.bg-washed-blue.white.lh-copy(fxLayout='row wrap', fxLayoutAlign='space-between center')
       span.f5 {{ title }}
       span.f6 {{ date }}
 
     .ph3.pv3(fxFlex='1 1 auto', fxLayout, fxLayoutAlign='center center')
       p.lh-copy.f6 {{ content }}
-

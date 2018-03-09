@@ -1,6 +1,6 @@
 h2.f2.tc.roboto-slab.b.gray Experience
 
-.mt5.ph3.min-vh-65([@animationRunning]='animationRunning', (eleInView)='onEleInView()')
+.mt5.ph3.experience_container([@animationRunning]='animationRunning', (eleInView)='onEleInView()')
   ng-container(*ngIf='animationRunning')
     mk-experience-item(
       *ngFor='let item of experienceItems; even as isEven; last as isLast',

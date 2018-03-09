@@ -3,6 +3,7 @@ import {trigger, state, style, sequence, transition, animate} from '@angular/ani
 import {BehaviorSubject} from 'rxjs/BehaviorSubject'
 import {Observable} from 'rxjs/Observable'
 import {map as rxMap, distinctUntilChanged} from 'rxjs/operators'
+import {ScrollToService} from '@nicky-lenaers/ngx-scroll-to'
 
 const NAVBAR_HEIGHT = 64
 const ANIMATION_TIME = 400
@@ -27,7 +28,7 @@ export class NavBarComponent {
   public navBarState: Observable<'fixed'|'absolute'>
   private scrollPosition = new BehaviorSubject<number>(window.scrollY)
 
-  constructor() {
+  constructor(private scrollService: ScrollToService) {
     this.navBarState = this.scrollPosition
       .asObservable()
       .pipe(
@@ -40,6 +41,10 @@ export class NavBarComponent {
   @HostListener('window:scroll', ['$event.currentTarget.scrollY'])
   public handleScroll(scrollPos: number) {
     this.scrollPosition.next(scrollPos)
+  }
+
+  public scrollTo(target: string) {
+    this.scrollService.scrollTo({target})
   }
 
   private _isInMobileLayout() {
