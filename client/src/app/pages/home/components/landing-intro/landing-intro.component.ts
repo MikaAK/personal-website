@@ -9,7 +9,6 @@ import {scrollToElementId} from '../../../../../shared/helpers/ui'
 })
 export class LandingIntroComponent {
   @Output() contactForRates = new EventEmitter<string>()
-  public isAcceptingContracts = true
 
   public onClickToContact() {
     scrollToElementId('contact')

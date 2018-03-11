@@ -38,11 +38,16 @@
 
        span.f5.b.mt3.tc((click)='onScrollToClick("backend-services")') Backend
 
-     a((click)='onClickToContact()', fxLayout='column', fxLayoutAlign='center center')
-       .w3([ngClass]='isAcceptingContracts ? "green" : "red"')
+     a.light-blue.dim-text(
+       fxLayout='column',
+       fxLayoutAlign='center center',
+       href='assets/files/Mika Kalathil Resume.pdf',
+       target='_blank'
+     )
+       .w3.green
          != require('assets/svg/contract-icon.svg')
 
-       span.f5.b.mt3.tc {{ isAcceptingContracts ? '' : 'Not ' }}Accepting Contracts
+       span.f5.b.mt3.tc Download Resume
 
      a((click)='onScrollToClick("services")', fxLayout='column', fxLayoutAlign='center center')
        .w3
