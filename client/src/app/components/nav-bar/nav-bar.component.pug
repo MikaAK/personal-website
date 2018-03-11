@@ -1,20 +1,20 @@
-mat-toolbar.bg-dark-blue.z-9999('[@navBarFixed]'='navBarState | async')
-  nav(fxFlex='1 1 auto', fxLayoutAlign='center center')
-    ol(fxLayoutAlign='center center', fxLayoutGap='20px')
-      li.white
-        a.mk-list-link((click)='scrollTo("home")') Home
+mat-toolbar.bg-dark-blue.z-9999.w-100.flex.items-center.justify-center('[@navBarFixed]'='navBarState | async')
+  nav.center
+    ol.flex.items-center.justify-center
+      li.white.mh3
+        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link((click)='scrollTo("home")') Home
 
       hr.b--white.h2
 
-      li.white
-        a.mk-list-link((click)='scrollTo("portfolio")') Portfolio
+      li.white.mh3
+        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link((click)='scrollTo("portfolio")') Portfolio
 
       hr.b--white.h2
 
       //- li.white
-      //-   a.mk-list-link Blog
+      //-   button.mk-list-link Blog
 
       //- hr.b--white.h2
 
-      li.white
-        a.mk-list-link((click)='scrollTo("contact")') Contact
+      li.white.mh3
+        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link((click)='scrollTo("contact")') Contact

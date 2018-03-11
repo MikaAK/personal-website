@@ -6,5 +6,9 @@ import {Component} from '@angular/core'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public scale = 1
+  public contactMessagePrefill: string
+
+  public onContactForRates(message: string) {
+    this.contactMessagePrefill = message
+  }
 }

@@ -1,6 +1,6 @@
 [{
   "title": "Edvisor",
-  "imageUrl": "https://placeimg.com/380/215/tech",
+  "imageUrl": "assets/img/edvisor.png",
   "tags": [{
     "name": "Elixir",
     "color": "purple"
@@ -22,7 +22,7 @@
   }]
 }, {
   "title": "Dropcuff",
-  "imageUrl": "https://placeimg.com/380/215/tech",
+  "imageUrl": "assets/img/dropcuff.png",
   "tags": [{
     "name": "Elixir",
     "color": "purple"
@@ -41,7 +41,7 @@
   }]
 }, {
   "title": "Food.ee",
-  "imageUrl": "https://placeimg.com/380/215/tech",
+  "imageUrl": "assets/img/foodee.png",
   "tags": [{
     "name": "AngularJS",
     "color": "red"

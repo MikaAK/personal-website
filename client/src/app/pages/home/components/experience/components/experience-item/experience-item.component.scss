@@ -13,11 +13,11 @@ $hide-svg-width: 550px;
   }
 
   &:not(:first-of-type) {
-    @include breakpoint(max-width $hide-svg-width) {
+    @include breakpoint(max-width $hide-svg-width + 1) {
       margin-top: 1.5rem;
     }
 
-    @include breakpoint($hide-svg-width - 1) {
+    @include breakpoint($hide-svg-width) {
       margin-top: -85px;
     }
   }

@@ -3,15 +3,19 @@ import {trigger, state, style, sequence, transition, animate} from '@angular/ani
 import {BehaviorSubject} from 'rxjs/BehaviorSubject'
 import {Observable} from 'rxjs/Observable'
 import {map as rxMap, distinctUntilChanged} from 'rxjs/operators'
-import {ScrollToService} from '@nicky-lenaers/ngx-scroll-to'
 
-const NAVBAR_HEIGHT = 64
+import {scrollToElementId} from '../../../shared/helpers/ui'
+import {environment}  from '../../../environments/environment'
+
+const NAVBAR_HEIGHT = environment.navbarHeight
 const ANIMATION_TIME = 400
+
+const isMobile = () => window.innerWidth <= 650
+const isPastNavbarTop = (scrollTop: number) => scrollTop > NAVBAR_HEIGHT
 
 @Component({
   selector: 'mk-nav-bar',
   templateUrl: './nav-bar.component.pug',
-  styleUrls: ['./nav-bar.component.scss'],
   animations: [
     trigger('navBarFixed', [
       state('absolute', style({position: 'absolute', opacity: 1})),
@@ -28,13 +32,13 @@ export class NavBarComponent {
   public navBarState: Observable<'fixed'|'absolute'>
   private scrollPosition = new BehaviorSubject<number>(window.scrollY)
 
-  constructor(private scrollService: ScrollToService) {
+  constructor() {
     this.navBarState = this.scrollPosition
       .asObservable()
       .pipe(
-        rxMap((scrollPosition) => this._isPastTopPageNavbar(scrollPosition)),
+        rxMap((scrollPosition) => isPastNavbarTop(scrollPosition)),
         distinctUntilChanged(),
-        rxMap((isPastTop) => this._isInMobileLayout() || isPastTop ? 'fixed' : 'absolute')
+        rxMap((isPastTop) => isMobile() || isPastTop ? 'fixed' : 'absolute')
       )
   }
 
@@ -44,14 +48,9 @@ export class NavBarComponent {
   }
 
   public scrollTo(target: string) {
-    this.scrollService.scrollTo({target})
-  }
-
-  private _isInMobileLayout() {
-    return window.innerWidth <= 650
-  }
-
-  private _isPastTopPageNavbar(scrollTop: number): boolean {
-      return scrollTop > NAVBAR_HEIGHT
+    if (target === 'home')
+      window.scroll({top: 0, left: 0, behavior: 'smooth'})
+    else
+      scrollToElementId(target)
   }
 }

@@ -1,0 +1,19 @@
+@import '~styles/utility';
+@import '~breakpoint-sass';
+
+$z-index: 99999;
+
+mk-nav-bar .mat-toolbar {
+  height: $mat-toolbar-height;
+
+  @include breakpoint($navbar-layout-switch) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include breakpoint(max-width $navbar-layout-switch - 1) {
+    position: fixed;
+    bottom: 0;
+  }
+}

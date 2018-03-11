@@ -1,4 +1,4 @@
-import {Component, HostBinding} from '@angular/core'
+import {Component, HostBinding, Input} from '@angular/core'
 import {trigger, transition, query, style, stagger, animate} from '@angular/animations'
 import {FormBuilder, Validators} from '@angular/forms'
 import {catchError, mapTo as rxMapTo} from 'rxjs/operators'
@@ -37,6 +37,22 @@ const ANIMATION_TIME = 750
 })
 export class ContactComponent {
   @HostBinding('@contactAnimation') public isInView = false
+
+  @Input() set email(val: string) {
+    if (this.emailControl)
+      this.emailControl.setValue(val)
+  }
+
+  @Input() set name(val: string) {
+    if (this.nameControl)
+      this.nameControl.setValue(val)
+  }
+
+  @Input() set message(val: string) {
+    if (this.messageControl)
+      this.messageControl.setValue(val)
+  }
+
   public isSendingEmail = false
   public didSendEmail = false
   public contactGroup = this.fb.group({
@@ -45,25 +61,26 @@ export class ContactComponent {
     message: ['', {validators: [Validators.required]}]
   })
 
-  public get email() {
+  public get emailControl() {
     return this.contactGroup.get('email')
   }
 
-  public get name() {
+  public get nameControl() {
     return this.contactGroup.get('name')
   }
 
-  public get message() {
+
+  public get messageControl() {
     return this.contactGroup.get('message')
   }
 
   public get emailErrorMessage() {
-    if (!this.email || !this.email.errors)
+    if (!this.emailControl || !this.emailControl.errors)
       return ''
-    else if (this.email.errors.required)
+    else if (this.emailControl.errors.required)
       return 'Email is required'
 
-    else if (this.email.errors.email)
+    else if (this.emailControl.errors.email)
       return 'Email is invalid'
   }
 

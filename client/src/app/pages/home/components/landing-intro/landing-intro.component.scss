@@ -15,6 +15,10 @@ $up-to-single-column-point: max-width $single-column-point - 1;
   min-height: calc(100vh - #{$mat-toolbar-height});
 }
 
+.landing-intro_image {
+  min-height: 200px;
+}
+
 .software-title {
   font-size: 2rem;
 }

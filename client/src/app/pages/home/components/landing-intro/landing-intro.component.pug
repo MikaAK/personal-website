@@ -1,7 +1,7 @@
 .w-100.vh-65.bg-light-blue.ph5.pt5.pb3.trskY8.absolute.top-0.left-0.z-0.mat-elevation-z3
 
 .w-50.mw7.mw-xxl.z-1.landing-intro_opening
-  img.w-30.br-100.dib.mw-m(
+  img.w-30.br-100.dib.mw-m.landing-intro_image(
     src='assets/img/personal_image.jpeg',
     alt='Profile Photo'
   )
@@ -26,26 +26,26 @@
       button.mat-button-padding--m.w-100.bg-washed-blue.white(
         mat-button,
         color='accent',
-        ngx-scroll-to='#contact'
+        (click)='onClickToContact()'
       ) Contact for Rates
 
 .w-100.landing-intro_status-cards
   mat-card.mw7.bg-white.center.mat-elevation-z5
    .ph3(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
-     a([ngx-scroll-to]="'#services'", fxLayout='column', fxLayoutAlign='center center')
+     a((click)='onScrollToClick("services")', fxLayout='column', fxLayoutAlign='center center')
        .w3
          != require('assets/svg/backend-icon.svg')
 
-       span.f5.b.mt3.tc(ngx-scroll-to="#backend-services") Backend
+       span.f5.b.mt3.tc((click)='onScrollToClick("backend-services")') Backend
 
-     div(fxLayout='column', fxLayoutAlign='center center')
+     a((click)='onClickToContact()', fxLayout='column', fxLayoutAlign='center center')
        .w3([ngClass]='isAcceptingContracts ? "green" : "red"')
          != require('assets/svg/contract-icon.svg')
 
        span.f5.b.mt3.tc {{ isAcceptingContracts ? '' : 'Not ' }}Accepting Contracts
 
-     a(ngx-scroll-to="#services", fxLayout='column', fxLayoutAlign='center center')
+     a((click)='onScrollToClick("services")', fxLayout='column', fxLayoutAlign='center center')
        .w3
          != require('assets/svg/frontend-icon.svg')
 
-       span.f5.b.mt3.tc(ngx-scroll-to="#frontend-services") Frontend
+       span.f5.b.mt3.tc Frontend

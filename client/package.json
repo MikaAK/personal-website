@@ -55,6 +55,7 @@
     "ramda": "^0.25.0",
     "rxjs": "^5.5.5",
     "sass-em": "^1.0.3",
+    "smoothscroll-polyfill": "^0.4.3",
     "tachyons-sass": "^4.9.2",
     "web-animations-js": "^2.3.1",
     "webfontloader": "^1.6.28",
@@ -79,6 +80,7 @@
     "babel-eslint": "^8.1.2",
     "chokidar-cli": "^1.2.0",
     "codelyzer": "^4.0.2",
+    "compression-webpack-plugin": "^1.1.10",
     "dotenv": "^4.0.0",
     "eslint": "^4.14.0",
     "eslint-codeframe-formatter": "^1.0.2",
@@ -111,6 +113,7 @@
     "ts-node": "^4.1.0",
     "tslint": "~5.8.0",
     "tslint-eslint-rules": "^4.1.1",
-    "typescript": "~2.4.2"
+    "typescript": "~2.4.2",
+    "webpack-s3-plugin": "^1.0.0-rc.0"
   }
 }

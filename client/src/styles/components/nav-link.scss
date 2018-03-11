@@ -1,0 +1,7 @@
+.nav-link {
+  transition: color 200ms ease-in-out;
+
+  &:focus:not(:hover) {
+    color: white;
+  }
+}
