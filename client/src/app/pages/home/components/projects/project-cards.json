@@ -1,4 +1,48 @@
 [{
+  "title": "Samacare",
+  "imageUrl": "assets/img/samacare.png",
+  "tags": [{
+    "name": "Elixir",
+    "color": "purple"
+  }, {
+    "name": "Ramda",
+    "color": "yellow"
+  }, {
+    "name": "Angular",
+    "color": "red"
+  }, {
+    "name": "Phoenix",
+    "color": "purple"
+  }, {
+    "color": "yellow",
+    "name": "Javascript"
+  }, {
+    "name": "GraphQL",
+    "color": "purple"
+  }]
+}, {
+  "title": "NRG eSports",
+  "imageUrl": "assets/img/nrgesports.png",
+  "tags": [{
+    "name": "Elixir",
+    "color": "purple"
+  }, {
+    "name": "Ramda",
+    "color": "yellow"
+  }, {
+    "name": "Angular",
+    "color": "red"
+  }, {
+    "name": "Phoenix",
+    "color": "purple"
+  }, {
+    "color": "yellow",
+    "name": "Javascript"
+  }, {
+    "name": "GraphQL",
+    "color": "purple"
+  }]
+}, {
   "title": "Edvisor",
   "imageUrl": "assets/img/edvisor.png",
   "tags": [{

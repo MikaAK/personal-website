@@ -1,8 +1,8 @@
 h2.f2.tc.roboto-slab.b.gray Projects
 
-.w-100.mt5.ph3.mxw-xxxl.center.project-card_container(fxLayout='row wrap', fxLayoutAlign='space-around center', (eleInView)='onEleInView()')
+.w-100.mt5.ph3.mxw-xxxl.center.project-card_container(fxLayout='row wrap', fxLayoutAlign='center center', (eleInView)='onEleInView()')
   ng-container(*ngIf='isInView')
-    mk-project-card.w-30.mh2.mv3(
+    mk-project-card.w-30.mh3.mv3(
       *ngFor='let project of projectCards',
       [title]='project.title',
       [imageUrl]='project.imageUrl',

@@ -1,4 +1,7 @@
 @import '~styles/utility';
+@import '~breakpoint-sass';
+
+$project-card-single: 745px;
 
 :host {
   min-height: 60vh;
@@ -10,7 +13,11 @@
   /deep/ mat-card {
     min-width: 305px;
     max-width: 390px;
-    min-height: 390px;
+    min-height: 310px;
+
+    @include breakpoint($project-card-single) {
+      min-height: 390px;
+    }
   }
 
   /deep/ mk-project-card {
