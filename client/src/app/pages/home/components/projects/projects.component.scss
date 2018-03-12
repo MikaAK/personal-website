@@ -2,6 +2,9 @@
 @import '~breakpoint-sass';
 
 $project-card-single: 745px;
+$project-cards-3-grid-size-small: 694px;
+$project-cards-3-grid-size-large: 745px;
+$project-cards-2-grid-size: 1043px;
 
 :host {
   min-height: 60vh;
@@ -25,6 +28,19 @@ $project-card-single: 745px;
   }
 
   .project-card_container {
-    min-height: 845px;
+    min-height: 1690px;
+
+
+    @include breakpoint($project-cards-3-grid-size-small) {
+      min-height: 1014px;
+    }
+
+    @include breakpoint($project-cards-3-grid-size-large) {
+      min-height: 1266px;;
+    }
+
+    @include breakpoint($project-cards-2-grid-size) {
+      min-height: 845px;
+    }
   }
 }

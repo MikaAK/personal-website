@@ -2,14 +2,22 @@ mat-toolbar.bg-dark-blue.z-9999.w-100.flex.items-center.justify-center('[@navBar
   nav.center
     ol.flex.items-center.justify-center
       li.white.mh3
-        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link((click)='scrollTo("home")') Home
+        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
+          (click)='scrollTo("home")',
+          type='button'
+        ) Home
 
-      hr.b--white.h2
+      li
+        hr.b--white.h2
 
       li.white.mh3
-        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link((click)='scrollTo("portfolio")') Portfolio
+        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
+          (click)='scrollTo("portfolio")',
+          type='button'
+        ) Portfolio
 
-      hr.b--white.h2
+      li
+        hr.b--white.h2
 
       //- li.white
       //-   button.mk-list-link Blog
@@ -17,4 +25,7 @@ mat-toolbar.bg-dark-blue.z-9999.w-100.flex.items-center.justify-center('[@navBar
       //- hr.b--white.h2
 
       li.white.mh3
-        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link((click)='scrollTo("contact")') Contact
+        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
+          (click)='scrollTo("contact")',
+          type='button'
+        ) Contact

@@ -1,4 +1,8 @@
 @import '~styles/utility';
+@import '~breakpoint-sass';
+
+$services-2-grid: 667px;
+$services-1-grid: 995px;
 
 :host {
   min-height: 60vh;
@@ -14,5 +18,13 @@
 }
 
 .services_container {
-  min-height: 300px;
+  min-height: 980px;
+
+  @include breakpoint($services-2-grid) {
+    min-height: 660px;;
+  }
+
+  @include breakpoint($services-1-grid) {
+    min-height: 335px;;
+  }
 }

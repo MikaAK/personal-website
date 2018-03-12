@@ -22,10 +22,10 @@ export class SkillsComponent {
     value: 1
   }, {
     name: 'Javascript',
-    value: 2
+    value: 3
   }, {
     name: 'Angular',
-    value: 2
+    value: 3
   }]
 
   public miscSkillsSchemes = {

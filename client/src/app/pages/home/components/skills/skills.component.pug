@@ -1,6 +1,6 @@
 h2.f2.tc.roboto-slab.b.gray((eleInView)='onEleInView()') Skills
 
-.ph2.overflow-hidden.min-vh-50(fxLayout='row wrap', fxLayoutAlign='center center')
+.ph2.overflow-hidden.mk-skills_container(fxLayout='row wrap', fxLayoutAlign='center center')
   ng-container(*ngIf='isInView')
     .mk-skills_chart.vh-50(ngClass.gt-xs='mw-xl', ngClass.lt-sm='mw-l')
       ngx-charts-pie-chart(

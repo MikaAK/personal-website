@@ -3,12 +3,26 @@
 
 $skills-column-width-size: 560px;
 $skills-column-width-second-size: 735px;
+$skills-2-row-size: 1006px;
+$skills-1-row-size: 1291px;
 
 :host {
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.mk-skills_container {
+  min-height: 1040px;
+
+  @include breakpoint($skills-2-row-size) {
+    min-height: 695px;
+  }
+
+  @include breakpoint($skills-1-row-size) {
+    min-height: 345px;
+  }
 }
 
 .mk-skills_chart {

@@ -3,7 +3,8 @@ import {query, transition, trigger, animate, style, stagger, group} from '@angul
 
 import * as experienceItems from './experience-items.json'
 
-const isMobile = window.innerWidth < 550
+// Stagger seems to pre calculate this in AOT so it doesn't actually work
+const isMobile = false // window.innerWidth < 550
 const ANIMATION_LINE_DOWN_TIME = isMobile ? 0 : 300
 const ANIMATION_BOUNCE_TIME = isMobile ? 0 : 200
 const DRAW_ANIMATION_TIME = 200
