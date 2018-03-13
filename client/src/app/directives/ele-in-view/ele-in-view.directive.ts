@@ -25,7 +25,7 @@ export function observerCallback(entries: IntersectionObserverEntry[], observer:
     })
 }
 
-const observer = new IntersectionObserver(observerCallback, {threshold: .4})
+const observer = new IntersectionObserver(observerCallback, {rootMargin: '-200px 0px -200px 0px'})
 
 export const intersectionObserver = (target: Element, callback: Function) => {
   callbacks.push({target, callback})
