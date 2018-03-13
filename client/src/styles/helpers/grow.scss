@@ -1,0 +1,9 @@
+.grow-svg svg {
+  @extend .grow;
+}
+
+.grow-svg:hover svg {
+  &, &:hover {
+    transform: scale(1.1);
+  }
+}

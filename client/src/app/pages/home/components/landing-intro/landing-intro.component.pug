@@ -16,10 +16,10 @@
       h3.normal.software-title Software Developer
 
       div.dib(fxLayout.xs, fxLayoutAlign.xs='center')
-        a.icon-s(href='https://github.com/MikaAK', target='_blank', rel='noopener')
+        a.icon-s.grow.grow-large(href='https://github.com/MikaAK', target='_blank', rel='noopener')
           != require('assets/svg/octocat.svg')
 
-        a.icon-s(href='https://ca.linkedin.com/in/mikakalathil', target='_blank', rel='noopener')
+        a.icon-s.grow.grow-large(href='https://ca.linkedin.com/in/mikakalathil', target='_blank', rel='noopener')
           != require('assets/svg/linkedin.svg')
 
     .mt3.w-100
@@ -32,25 +32,25 @@
 .w-100.landing-intro_status-cards
   mat-card.mw7.bg-white.center.mat-elevation-z5
    .ph3(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
-     a((click)='onScrollToClick("services")', fxLayout='column', fxLayoutAlign='center center')
-       .w3
-         != require('assets/svg/backend-icon.svg')
+     a.grow-svg((click)='onScrollToClick("experience")', fxLayout='column', fxLayoutAlign='center center')
+       .w3.h3.flex.flex-center.icon-full
+         != require('assets/svg/computer.svg')
 
-       span.f5.b.mt3.tc((click)='onScrollToClick("backend-services")') Backend
+       span.f5.b.mt3.tc((click)='onScrollToClick("experience")') Experience
 
-     a.light-blue.dim-text(
+     a.light-blue.grow-svg(
        fxLayout='column',
        fxLayoutAlign='center center',
        href='assets/files/Mika Kalathil Resume.pdf',
        target='_blank'
      )
-       .w3.green
+       .w3.green.h3
          != require('assets/svg/contract-icon.svg')
 
        span.f5.b.mt3.tc Download Resume
 
-     a((click)='onScrollToClick("services")', fxLayout='column', fxLayoutAlign='center center')
-       .w3
-         != require('assets/svg/frontend-icon.svg')
+     a.grow-svg((click)='onScrollToClick("skills")', fxLayout='column', fxLayoutAlign='center center')
+       .w3.h3
+         != require('assets/svg/keyboard.svg')
 
-       span.f5.b.mt3.tc Frontend
+       span.f5.b.mt3.tc Skills
