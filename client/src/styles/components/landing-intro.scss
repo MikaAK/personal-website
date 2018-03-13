@@ -1,11 +1,8 @@
-@import '~styles/utility';
-@import '~breakpoint-sass';
-
 $max-status-width-point: max-width 540px;
 $single-column-point: 745px;
 $up-to-single-column-point: max-width $single-column-point - 1;
 
-:host {
+mk-landing-intro {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

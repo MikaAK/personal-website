@@ -13,8 +13,9 @@
 @import 'elements/i';
 
 // Components
-@import 'components/list-link';
 @import 'components/nav-bar';
+@import 'components/landing-intro';
+@import 'components/list-link';
 @import 'components/nav-link';
 @import 'components/icon';
 @import 'components/mat-button';
@@ -25,6 +26,7 @@
 @import 'helpers/dim';
 @import 'helpers/grow';
 @import 'helpers/flex';
+@import 'helpers/text';
 @import 'helpers/height';
 @import 'helpers/z-index';
 @import 'helpers/transforms';

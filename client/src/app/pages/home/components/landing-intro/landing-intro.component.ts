@@ -4,8 +4,7 @@ import {scrollToElementId} from '../../../../../shared/helpers/ui'
 
 @Component({
   selector: 'mk-landing-intro',
-  templateUrl: './landing-intro.component.pug',
-  styleUrls: ['./landing-intro.component.scss']
+  templateUrl: './landing-intro.component.pug'
 })
 export class LandingIntroComponent {
   @Output() contactForRates = new EventEmitter<string>()

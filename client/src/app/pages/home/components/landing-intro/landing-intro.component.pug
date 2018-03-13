@@ -1,21 +1,20 @@
 .w-100.vh-65.bg-light-blue.ph5.pt5.pb3.trskY8.absolute.top-0.left-0.z-0.mat-elevation-z3
 
-.w-50.mw7.mw-xxl.z-1.landing-intro_opening
+.w-50.mw7.mw-xxl.z-1.landing-intro_opening(itemscope, itemtype='http://schema.org/Person')
   img.w-30.br-100.dib.mw-m.landing-intro_image(
+    itemprop='image',
     src='assets/img/personal_image.jpg',
     alt='Profile Photo'
   )
 
-  .landing-intro_opening_text(
-    fxLayout='column'
-  )
+  .landing-intro_opening_text.flex.flex-column
     .white
-      h1.f0(ngClass.xs='tc') Mika Kalathil
+      h1.f0.xs-tc(itemprop='name') Mika Kalathil
 
-    .mt1.white(fxLayout, fxLayout.xs='column', fxFlex='1 1 auto')
-      h3.normal.software-title Software Developer
+    .mt1.white.flex.xs-flex-column.flex-auto
+      h3.normal.software-title(itemprop='jobTitle') Software Developer
 
-      div.dib(fxLayout.xs, fxLayoutAlign.xs='center')
+      div.dib.flex.items-center.xs-justify-center
         a.icon-s.grow.grow-large(href='https://github.com/MikaAK', target='_blank', rel='noopener')
           != require('assets/svg/octocat.svg')
 
@@ -31,16 +30,14 @@
 
 .w-100.landing-intro_status-cards
   mat-card.mw7.bg-white.center.mat-elevation-z5
-   .ph3(fxLayout, fxLayoutAlign='space-around', fxLayoutGap='20px')
-     a.grow-svg((click)='onScrollToClick("experience")', fxLayout='column', fxLayoutAlign='center center')
+   .ph3.flex.justify-around
+     a.grow-svg.mr3.flex.flex-column.flex-center((click)='onScrollToClick("experience")')
        .w3.h3.flex.flex-center.icon-full
          != require('assets/svg/computer.svg')
 
-       span.f5.b.mt3.tc((click)='onScrollToClick("experience")') Experience
+       span.f5.b.mt3.tc Experience
 
-     a.light-blue.grow-svg(
-       fxLayout='column',
-       fxLayoutAlign='center center',
+     a.light-blue.grow-svg.mr3.flex.flex-column.flex-center(
        href='assets/files/Mika Kalathil Resume.pdf',
        target='_blank'
      )
@@ -49,7 +46,7 @@
 
        span.f5.b.mt3.tc Download Resume
 
-     a.grow-svg((click)='onScrollToClick("skills")', fxLayout='column', fxLayoutAlign='center center')
+     a.grow-svg.flex.flex-column.flex-center((click)='onScrollToClick("skills")')
        .w3.h3
          != require('assets/svg/keyboard.svg')
 

@@ -1,0 +1,6 @@
+.xs-tc {
+  @include breakpoint($screen-max-xs) {
+    text-align: center;
+  }
+}
+

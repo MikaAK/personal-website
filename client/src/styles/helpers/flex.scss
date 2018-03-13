@@ -2,3 +2,21 @@
   justify-content: center;
   align-items: center;
 }
+
+@include breakpoint($screen-max-xs) {
+  .xs-flex-column {
+    flex-direction: column;
+  }
+
+  .xs-items-center {
+    align-items: center;
+  }
+
+  .xs-justify-center {
+    justify-content: center;
+  }
+
+  .xs-flex {
+    display: flex;
+  }
+}
