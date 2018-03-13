@@ -12,5 +12,6 @@ export type TagInput = {
 export class ProjectCardComponent {
   @Input() public imageUrl: string
   @Input() public title: string
+  @Input() public link: string
   @Input() public tags: TagInput[]
 }

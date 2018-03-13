@@ -5,9 +5,9 @@ import * as experienceItems from './experience-items.json'
 
 // Stagger seems to pre calculate this in AOT so it doesn't actually work
 const isMobile = false // window.innerWidth < 550
-const ANIMATION_LINE_DOWN_TIME = isMobile ? 0 : 300
-const ANIMATION_BOUNCE_TIME = isMobile ? 0 : 200
-const DRAW_ANIMATION_TIME = 200
+const ANIMATION_LINE_DOWN_TIME = isMobile ? 0 : 375
+const ANIMATION_BOUNCE_TIME = isMobile ? 0 : 225
+const DRAW_ANIMATION_TIME = 225
 const STEP_TIME = (ANIMATION_BOUNCE_TIME / 2) + ANIMATION_LINE_DOWN_TIME
 
 @Component({
@@ -63,7 +63,7 @@ const STEP_TIME = (ANIMATION_BOUNCE_TIME / 2) + ANIMATION_LINE_DOWN_TIME
 })
 export class ExperienceComponent {
   public animationRunning = false
-  public experienceItems = experienceItems
+  public experienceItems = experienceItems.reverse()
 
   public onEleInView() {
     this.animationRunning = true

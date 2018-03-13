@@ -1,29 +1,38 @@
 [{
   "title": "The Journey Begins",
   "date": "July 2013",
-  "content": "I started learning how to code! First with C++, then C# and finally moving onto HTML/CSS, Javascript and Ruby on Rails"
+  "content": "I started learning how to code! First with C++, then C# and finally moving onto HTML/CSS, Javascript and Ruby on Rails."
 }, {
   "title": "Lighthouse Labs",
   "date": "June 2014 - Aug 2014",
-  "content": "At Lighthouse Labs I earned my Immersive Web Development Diploma as a first step in my development career"
+  "content": "Graduated at <i>Lighthouse Labs</i> with a <i>Immersive Web Development</i> diploma."
+
 }, {
   "title": "Food.ee",
   "date": "Aug 2014 - Oct 2014",
-  "content": "At Food.ee I got hands on experience developing an AngularJS app from scratch. I rebuilt the app without replacing the css or html just completely replacing the javascript"
+  "content": "At Food.ee I got hands on experience developing an AngularJS app from scratch. I rebuilt the app without replacing the css or html by completely replacing the javascript."
+}, {
+  "title": "Edvisor.IO",
+  "date": "Dec 2014 - July 2017",
+  "content": "I was Edvisor's first developer, meaning I architected their application from the ground up. After they hired the rest of the team I managed the developers while taking up the responsibility for making sure we had our build system and tooling working on point."
 }, {
   "title": "Dropcuff",
   "date": "Aug 2015 - Present",
-  "content": "Dropcuff is a startup of which I am working on, we're a team of 3 aiming to change the music industry as we know it"
+  "content": "Dropcuff is a startup I co-created that is currently being developed by my team and I. We are developing an app that will bring equity to the music industry."
 }, {
   "title": "NRG eSports",
   "date": "Jan 2017 - Oct 2017",
-  "content": "At NRG I created a high availability backend with Elixir using Absinthe and Phoenix. I also helped frontside in Angular to implement features"
+  "content": "At NRG I created a highly available backend with Elixir using Absinthe and Phoenix, I also developed part of the frontend in Angular."
 }, {
   "title": "Samacare",
   "date": "Nov 2017 - March 2018",
-  "content": "During my time at Samacare I archetected a backend application with Elixir and a frontend PWA with Angular"
+  "content": "During my time at Samacare I architected a backend application with Elixir and a frontend PWA with Angular."
 }, {
-  "title": "Self-Employed",
+  "title": "Artist Portfolio",
+  "date": "March 2017",
+  "content": "I was commissioned to build <a class='light-blue dim-text' href='https://pilarguineagil.com' target='_blank'>Pilar Guinea Gil's</a> artist portfolio which I designed and developed from scratch using Angular and a bit of AWS Lambda."
+}, {
+  "title": "Freelancer",
   "date": "Jan 2017 - Present",
-  "content": "With NRG eSports I became a contractor. I work out of my own company and take contracts that are interesting! Contact me if you have a project that needs working on"
+  "content": "I became a freelancer! I work out of my own company (Mika Software), and take contracts that are interesting, contact me if you have a project that needs working on."
 }]

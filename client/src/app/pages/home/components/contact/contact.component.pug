@@ -17,6 +17,7 @@ h2.f2.tc.roboto-slab.b.gray Contact
             mkTrimInput,
             [readonly]='didSendEmail',
             placeholder='Name',
+            autocomplete='name',
             formControlName='name'
           )
 
@@ -25,9 +26,10 @@ h2.f2.tc.roboto-slab.b.gray Contact
         mat-form-field(fxFlex.gt-xs='40%', ngClass.xs='w-100')
           input(
             matInput,
-          mkTrimInput,
+            mkTrimInput,
             [readonly]='didSendEmail',
             placeholder='Email',
+            autocomplete='email',
             formControlName='email'
           )
 
@@ -60,4 +62,3 @@ h2.f2.tc.roboto-slab.b.gray Contact
 
       .icon-xs.washed-green.ml2
         != require('assets/svg/checkmark.svg')
-

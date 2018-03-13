@@ -58,4 +58,4 @@ ng-template(#card)
       span.f6 {{ date }}
 
     .ph3.pv3(fxFlex='1 1 auto', fxLayout, fxLayoutAlign='center center')
-      p.lh-copy.f6 {{ content }}
+      p.lh-copy.f6([innerHTML]='sanitizedContent')

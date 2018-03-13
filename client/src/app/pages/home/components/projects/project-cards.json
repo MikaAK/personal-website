@@ -1,5 +1,6 @@
 [{
   "title": "Samacare",
+  "link": "https://samacare.net",
   "imageUrl": "assets/img/samacare.png",
   "tags": [{
     "name": "Elixir",
@@ -22,6 +23,7 @@
   }]
 }, {
   "title": "NRG eSports",
+  "link": "https://www.nrg.gg",
   "imageUrl": "assets/img/nrgesports.png",
   "tags": [{
     "name": "Elixir",
@@ -44,6 +46,7 @@
   }]
 }, {
   "title": "Edvisor",
+  "link": "https://edvisor.io",
   "imageUrl": "assets/img/edvisor.png",
   "tags": [{
     "name": "Elixir",
@@ -65,7 +68,25 @@
     "name": "Javascript"
   }]
 }, {
+  "title": "Pilar Guinea Gil",
+  "link": "https://pilarguineagil.com",
+  "imageUrl": "assets/img/pilar.png",
+  "tags": [{
+    "name": "Ramda",
+    "color": "yellow"
+  }, {
+    "name": "Angular",
+    "color": "red"
+  }, {
+    "color": "yellow",
+    "name": "Javascript"
+  }, {
+    "color": "orange",
+    "name": "AWS Lambda"
+  }]
+}, {
   "title": "Dropcuff",
+  "link": "https://dropcuff.com",
   "imageUrl": "assets/img/dropcuff.png",
   "tags": [{
     "name": "Elixir",
@@ -85,6 +106,7 @@
   }]
 }, {
   "title": "Food.ee",
+  "link": "https://food.ee",
   "imageUrl": "assets/img/foodee.png",
   "tags": [{
     "name": "AngularJS",
