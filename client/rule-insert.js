@@ -4,8 +4,8 @@ const {tap, compose, toPairs, values: objValues, flip, concat, join, filter, isE
 const commonCliConfig = 'node_modules/@angular/cli/models/webpack-configs/common.js'
 const rules = {
   pug: `\n{ test: /\\.pug$/, exclude: /node_modules/, loader: 'apply-loader!pug-loader?self' }`,
-  svgInline: `\n{ test: /\\.svg/, exclude: /node_modules/, loader: 'svg-inline-loader' }`,
-  graphqlLoader: `\n{ test: /\\.graphql$/, exclude: /node_modules/, loader: 'graphql-tag/loader', enforce: 'pre' }`
+  // svgInline: `\n{ test: /\\.svg/, exclude: /node_modules/, loader: 'svg-inline-loader' }`,
+  // graphqlLoader: `\n{ test: /\\.graphql$/, exclude: /node_modules/, loader: 'graphql-tag/loader', enforce: 'pre' }`
 }
 
 const appendString = flip(concat)

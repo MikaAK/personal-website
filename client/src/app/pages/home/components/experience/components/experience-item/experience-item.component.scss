@@ -1,6 +1,7 @@
 @import '~breakpoint-sass';
+@import '~styles/utility';
 
-$hide-svg-width: 550px;
+$random-large-sizeup: 1011px;
 
 :host {
   display: flex;
@@ -13,29 +14,62 @@ $hide-svg-width: 550px;
   }
 
   &:not(:first-of-type) {
-    @include breakpoint(max-width $hide-svg-width + 1) {
-      margin-top: 1.5rem;
-    }
+    margin-top: 1.5rem;
 
     @include breakpoint($hide-svg-width) {
+      margin-top: -72px;
+    }
+
+    @include breakpoint($screen-min-xs) {
+      margin-top: -60px;
+    }
+
+    @include breakpoint($screen-min-sm) {
+      margin-top: -85px;
+    }
+  }
+
+
+  &.experience-item_extra-size {
+    margin-top: 1.5rem;
+
+    @include breakpoint($hide-svg-width) {
+      margin-top: -72px;
+    }
+
+    @include breakpoint($screen-min-xs) {
+      margin-top: -59px;
+    }
+
+    @include breakpoint($screen-min-sm) {
+      margin-top: -91px;
+    }
+
+    @include breakpoint($random-large-sizeup) {
       margin-top: -85px;
     }
   }
 }
 
 .experience-item_svg-item {
-  margin-top: 65px;
+  margin-top: 105px;
   min-width: 345px;
 
-  @include breakpoint(max-width $hide-svg-width) {
+  @include breakpoint($screen-min-sm) {
+    margin-top: 65px;
+  }
+
+  @include breakpoint(max-width $hide-svg-width - 1) {
     display: none;
   }
 
   &.move-left-mobile {
+    transform: scale(1.5);
     margin-left: -25%;
   }
 
   &.move-left-extra-small {
+    transform: scale(1.4);
     margin-left: -35%;
   }
 }

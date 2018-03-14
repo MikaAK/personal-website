@@ -37,6 +37,7 @@ export class ExperienceItemComponent implements OnDestroy {
 
   public get viewBoxPath() {
     const length = this.isExtraSmall ? '230' : '260'
+    // const width = this.isMobile ? '250' : '114'
 
     return `0 0 ${length} 114`
   }

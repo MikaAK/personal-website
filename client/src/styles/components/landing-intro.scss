@@ -2,6 +2,11 @@ $max-status-width-point: max-width 540px;
 $single-column-point: 745px;
 $up-to-single-column-point: max-width $single-column-point - 1;
 
+mk-home {
+  padding-bottom: 3em;
+  display: block;
+}
+
 mk-landing-intro {
   display: flex;
   flex-direction: column;

@@ -18,9 +18,9 @@
     <meta name='author' content='Mika Kalathil'></meta>
     <meta name='copyright' content='Mika Kalathil'/>
 
-    <link rel='canonical' href='https://mikakalathil.ca'/>
-    <link rel='prefetch' href='assets/img/personal_image.jpg' as='image'>
+    <link rel='preload' href='assets/img/personal_image.jpg' as='image'>
 
+    <link rel='canonical' href='https://mikakalathil.ca'/>
     <meta name='robots' content='index,follow'/>
 
     <meta name='mobile-web-app-capable' content='yes'>
@@ -52,7 +52,7 @@
               </li>
 
               <li class='white mh3'>
-                <button class='pv2 mk-list-link btn-reset white f4 hover-light-silver nav-link'>Portfolio</button>
+                <button class='pv2 mk-list-link btn-reset white f4 hover-light-silver nav-link'>Projects</button>
               </li>
 
               <li>
@@ -68,14 +68,15 @@
       </mk-nav-bar>
     </mk-root>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48617207-5"></script> -->
-    <!-- <script> -->
-    <!--   window.dataLayer = window.dataLayer || []; -->
-    <!--   function gtag(){dataLayer.push(arguments);} -->
-    <!--   gtag('js', new Date()); -->
 
-    <!--   gtag('config', 'UA-48617207-5'); -->
-    <!-- </script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-48617207-5'></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-48617207-5');
+    </script>
   </body>
 </html>

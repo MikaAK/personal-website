@@ -1,0 +1,19 @@
+@import '~styles/utility';
+@import '~breakpoint-sass';
+
+.experience_container {
+  overflow: hidden;
+  min-height: 1250px;
+
+  @include breakpoint($hide-svg-width) {
+    min-height: 1720px;
+  }
+
+  @include breakpoint($screen-min-xs) {
+    min-height: 1820px;
+  }
+
+  @include breakpoint($screen-min-sm) {
+    min-height: 1250px;
+  }
+}

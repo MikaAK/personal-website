@@ -1,12 +1,12 @@
 mk-landing-intro.pb3.ph3#home((contactForRates)='onContactForRates($event)')
 
 
-mk-background-poly([bottomLeftModifier]='50')
+mk-background-poly([bottomLeftModifier]='50', [heightModifier]='50')
   mk-services
   mk-experience#experience.mt5.db
 
 mk-skills#skills.mt5
 
 mk-background-poly(reversed, [heightModifier]='0')
-  mk-projects.mt5#portfolio
+  mk-projects.mt5#projects
   mk-contact.db.mt5([message]='contactMessagePrefill')

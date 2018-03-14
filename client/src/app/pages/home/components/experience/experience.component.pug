@@ -4,6 +4,7 @@ h2.f2.tc.roboto-slab.b.gray Experience
   ng-container(*ngIf='animationRunning')
     mk-experience-item(
       *ngFor='let item of experienceItems; even as isEven; last as isLast',
+      [class.experience-item_extra-size]='item.title === "Food.ee" || item.title === "Edvisor.IO"',
       [direction]='isEven ? "left" : "right"',
       [title]='item.title',
       [date]='item.date',
