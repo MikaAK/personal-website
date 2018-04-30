@@ -5,13 +5,13 @@ mat-toolbar.z-9999.w-100.flex.items-center.justify-between('[@navBarFixed]'='nav
   nav
     ol.flex.items-center.justify-center
       li.white.mh3
-        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
+        button.nav-bar_button(
           (click)='scrollTo("home")',
           type='button'
         ) Home
 
       li.white.mh3
-        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
+        button.nav-bar_button(
           (click)='scrollTo("projects")',
           type='button'
         ) Projects
@@ -20,7 +20,7 @@ mat-toolbar.z-9999.w-100.flex.items-center.justify-between('[@navBarFixed]'='nav
       //-   button.mk-list-link Blog
 
       li.white.mh3
-        button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
+        button.nav-bar_button(
           (click)='scrollTo("contact")',
           type='button'
         ) Contact

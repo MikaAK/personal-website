@@ -5,15 +5,15 @@ $z-index: 99999;
 
 mk-nav-bar .mat-toolbar {
   height: $mat-toolbar-height;
-  background-color: transparent;
+  background-color: $dark-blue;
   padding: 0 1.5rem;
 
   @include breakpoint($navbar-layout-switch) {
+    background-color: transparent;
     position: absolute;
     top: 0;
     left: 0;
   }
-
   @include breakpoint(max-width $navbar-layout-switch - 1) {
     position: fixed;
     bottom: 0;
@@ -25,5 +25,41 @@ mk-nav-bar .mat-toolbar {
     font-weight: 200;
     font-size: 14px;
     color: #dcdcdc;
+  }
+
+  .nav-bar_button {
+    transition: color 200ms ease-in-out;
+    padding: 0 $spacing-small;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    font-weight: 100;
+
+    @include btn-reset;
+
+    @include breakpoint($navbar-layout-switch) {
+      font-size: 15px;
+    }
+  }
+
+  .nav-bar_button:hover {
+    color: $light-silver;
+  }
+
+  nav {
+    margin: 0 auto;
+
+    @include breakpoint($navbar-layout-switch) {
+      margin: 0;
+    }
+  }
+
+  .icon-s {
+    display: none;
+
+    @include breakpoint($navbar-layout-switch) {
+      display: block;
+    }
   }
 }
