@@ -36,7 +36,7 @@ export const intersectionObserver = (target: Element, callback: Function) => {
   selector: '[mkEleInView]'
 })
 export class EleInViewDirective implements AfterViewInit {
-  @Output() public eleInView = new EventEmitter()
+  @Output('mkEleInView') public eleInView = new EventEmitter()
 
   constructor(private _ngZone: NgZone, private _ele: ElementRef) { }
 

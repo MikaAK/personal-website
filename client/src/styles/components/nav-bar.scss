@@ -5,6 +5,8 @@ $z-index: 99999;
 
 mk-nav-bar .mat-toolbar {
   height: $mat-toolbar-height;
+  background-color: transparent;
+  padding: 0 1.5rem;
 
   @include breakpoint($navbar-layout-switch) {
     position: absolute;

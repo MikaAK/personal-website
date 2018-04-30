@@ -19,18 +19,17 @@ const isPastNavbarTop = (scrollTop: number) => scrollTop > NAVBAR_HEIGHT
 @Component({
   selector: 'mk-nav-bar',
   templateUrl: './nav-bar.component.pug',
-  styles: ['mat-toolbar { padding: 0 1.5rem; }'], // tslint:disable-line no-unused-css
   animations: [
     trigger('navBarFixed', [
       state('absolute', style({position: 'absolute', backgroundColor: TRANSPARENT_BACKGROUND})),
       state('fixed', style({position: 'fixed', backgroundColor: DARK_BLUE_BACKGROUND, opacity: 1})),
 
-      transition('* => fixed', sequence([
+      transition('absolute => fixed', sequence([
         style({position: 'fixed', backgroundColor: TRANSPARENT_BACKGROUND, opacity: 0}),
         animate(ANIMATION_TIME, style({backgroundColor: DARK_BLUE_BACKGROUND, opacity: 1}))
       ])),
 
-      transition('* => absolute', sequence([
+      transition('fixed => absolute', sequence([
         style({position: 'fixed', backgroundColor: DARK_BLUE_BACKGROUND}),
         animate(ANIMATION_TIME, style({backgroundColor: TRANSPARENT_BACKGROUND})),
         style({position: 'absolute'})

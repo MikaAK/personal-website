@@ -15,14 +15,17 @@ import {AppComponent} from './app.component'
 import {routes} from './app.routes'
 import {loadFonts} from './load-fonts'
 
+import {HomeModule} from './pages/home/home.module'
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    HomeModule,
     CopyFooterModule,
     NavBarModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'mkServerApp'}),
     FlexLayoutModule,
     HttpClientModule,
     BrowserAnimationsModule,
