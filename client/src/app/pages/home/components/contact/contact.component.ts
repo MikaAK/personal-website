@@ -17,7 +17,7 @@ const ANIMATION_TIME = 750
 @Component({
   selector: 'mk-contact',
   templateUrl: './contact.component.pug',
-  styles: ['.contact_container { min-height: 405px; }'],
+  styles: ['.contact_container { min-height: 405px; }'], // tslint:disable-line no-unused-css
   animations: [
     trigger('contactAnimation', [
       transition('* => *', [
@@ -38,17 +38,17 @@ const ANIMATION_TIME = 750
 export class ContactComponent {
   @HostBinding('@contactAnimation') public isInView = false
 
-  @Input() set email(val: string) {
+  @Input() public set email(val: string) {
     if (this.emailControl)
       this.emailControl.setValue(val)
   }
 
-  @Input() set name(val: string) {
+  @Input() public set name(val: string) {
     if (this.nameControl)
       this.nameControl.setValue(val)
   }
 
-  @Input() set message(val: string) {
+  @Input() public set message(val: string) {
     if (this.messageControl)
       this.messageControl.setValue(val)
   }
@@ -68,7 +68,6 @@ export class ContactComponent {
   public get nameControl() {
     return this.contactGroup.get('name')
   }
-
 
   public get messageControl() {
     return this.contactGroup.get('message')

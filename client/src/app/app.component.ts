@@ -6,7 +6,6 @@ import {Component} from '@angular/core' // , OnInit, OnDestroy
 
 // const SKIP_FOR_ON_LOAD = 1
 
-
 @Component({
   selector: 'mk-root',
   templateUrl: './app.component.pug',

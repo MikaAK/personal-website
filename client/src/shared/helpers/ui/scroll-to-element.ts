@@ -1,9 +1,10 @@
-import {environment}  from '../../../environments/environment'
+import {environment} from '../../../environments/environment'
+
+const OFFSET = 20
 
 const getElementScrollPosition = (ele: Element) => {
-  return window.scrollY + (ele.getBoundingClientRect().top - environment.navbarHeight - 20)
+  return window.scrollY + (ele.getBoundingClientRect().top - environment.navbarHeight - OFFSET)
 }
-
 
 export const scrollToElement = (element: Element | null) => {
   if (element)
@@ -13,4 +14,3 @@ export const scrollToElement = (element: Element | null) => {
       top: getElementScrollPosition(element)
     })
 }
-

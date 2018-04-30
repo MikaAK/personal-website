@@ -2,7 +2,6 @@ import {Component} from '@angular/core'
 import {query, transition, trigger, animate, style, stagger, group} from '@angular/animations'
 
 import * as experienceItems from './experience-items.json'
-
 // Stagger seems to pre calculate this in AOT so it doesn't actually work
 const isMobile = false // window.innerWidth < 550
 const ANIMATION_LINE_DOWN_TIME = isMobile ? 0 : 375
@@ -19,7 +18,10 @@ const STEP_TIME = (ANIMATION_BOUNCE_TIME / 2) + ANIMATION_LINE_DOWN_TIME
       transition('false => true', [
         query('.experience-item_line-down', [style({strokeDashoffset: 73})], {optional: true}),
         query('.experience-item_circle-inner, .experience-item_circle-outer', [style({transform: 'scale(0)'})]),
-        query('.experience-item_arm-left, .experience-item_arm-right', [style({strokeDashoffset: 111})], {optional: true}),
+        query('.experience-item_arm-left, .experience-item_arm-right', [
+          style({strokeDashoffset: 111})
+        ], {optional: true}),
+
         query('.mat-card', [style({opacity: 0})], {optional: true}),
 
         query('mk-experience-item', [

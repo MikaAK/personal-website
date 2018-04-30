@@ -1,11 +1,21 @@
+%icon svg {
+  display: block;
+}
+
 .icon-xs {
+  @extend %icon;
+
   width: 1.25rem;
 }
 
 .icon-s {
+  @extend %icon;
+
   width: 2.5rem;
 }
 
 .icon-full svg {
+  @extend %icon;
+
   width: 100%;
 }

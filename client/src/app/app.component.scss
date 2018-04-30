@@ -1,8 +1,0 @@
-@import '~styles/utility';
-@import '~breakpoint-sass';
-
-main {
-  @include breakpoint($navbar-layout-switch) {
-    padding-top: $mat-toolbar-height;
-  }
-}

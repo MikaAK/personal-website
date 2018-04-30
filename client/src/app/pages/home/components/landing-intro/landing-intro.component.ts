@@ -7,11 +7,11 @@ import {scrollToElementId} from '../../../../../shared/helpers/ui'
   templateUrl: './landing-intro.component.pug'
 })
 export class LandingIntroComponent {
-  @Output() contactForRates = new EventEmitter<string>()
+  @Output() public contactForRates = new EventEmitter<string>()
 
   public onClickToContact() {
     scrollToElementId('contact')
-    this.contactForRates.emit('Hi,\n\nI have a project about ___ requiring ___ features, what would your rates be?')
+    this.contactForRates.emit('Hi,\n\nmy project is about ___')
   }
 
   public onScrollToClick(eleId: string) {

@@ -14,7 +14,7 @@ mk-landing-intro {
   align-items: center;
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - #{$mat-toolbar-height});
+  min-height: 100vh;
 }
 
 .landing-intro_image {
@@ -29,6 +29,7 @@ mk-landing-intro {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: $mat-toolbar-height;
 
   @include breakpoint($up-to-single-column-point) {
     flex-direction: column;
@@ -47,6 +48,10 @@ mk-landing-intro {
       align-items: center;
     }
   }
+}
+
+.landing-intro_background {
+  background: linear-gradient(to bottom right, #348AC7, #7474BF);
 }
 
 .landing-intro_status-cards {

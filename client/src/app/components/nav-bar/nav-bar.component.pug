@@ -1,5 +1,8 @@
-mat-toolbar.bg-dark-blue.z-9999.w-100.flex.items-center.justify-center('[@navBarFixed]'='navBarState | async')
-  nav.center
+mat-toolbar.z-9999.w-100.flex.items-center.justify-between('[@navBarFixed]'='navBarState | async')
+  .icon-s
+    != require('assets/svg/logo.svg')
+
+  nav
     ol.flex.items-center.justify-center
       li.white.mh3
         button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
@@ -7,22 +10,14 @@ mat-toolbar.bg-dark-blue.z-9999.w-100.flex.items-center.justify-center('[@navBar
           type='button'
         ) Home
 
-      li
-        hr.b--white.h2
-
       li.white.mh3
         button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(
           (click)='scrollTo("projects")',
           type='button'
         ) Projects
 
-      li
-        hr.b--white.h2
-
       //- li.white
       //-   button.mk-list-link Blog
-
-      //- hr.b--white.h2
 
       li.white.mh3
         button.pv2.mk-list-link.btn-reset.white.f4.hover-light-silver.nav-link(

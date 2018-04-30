@@ -16,4 +16,12 @@ mk-nav-bar .mat-toolbar {
     position: fixed;
     bottom: 0;
   }
+
+  li button {
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 14px;
+    color: #dcdcdc;
+  }
 }

@@ -1,4 +1,4 @@
-import {NgZone, Directive, ElementRef, Output, EventEmitter} from '@angular/core'
+import {NgZone, Directive, ElementRef, Output, EventEmitter, AfterViewInit} from '@angular/core'
 
 interface IIntersectionCallback {
   target: Element
@@ -7,21 +7,21 @@ interface IIntersectionCallback {
 
 const callbacks: IIntersectionCallback[] = []
 
-export function findCallback(target: Element) {
+export const findCallback = (target: Element) => {
   return callbacks.find((callback) => callback.target === target)
 }
 
-export function isEntryVisible(entry: IntersectionObserverEntry) {
+export const isEntryVisible = (entry: IntersectionObserverEntry) => {
   return entry.intersectionRatio !== 0
 }
 
-export function observerCallback(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
+export const observerCallback = (entries: IntersectionObserverEntry[], interObserver: IntersectionObserver) => {
   return entries
     .filter(isEntryVisible)
     .map((entry) => [entry, findCallback(entry.target)])
     .forEach(([entry, callbackStore]: [IntersectionObserverEntry, IIntersectionCallback]) => {
       callbackStore.callback(entry)
-      observer.unobserve(entry.target)
+      interObserver.unobserve(entry.target)
     })
 }
 
@@ -33,9 +33,9 @@ export const intersectionObserver = (target: Element, callback: Function) => {
 }
 
 @Directive({
-  selector: '[eleInView]'
+  selector: '[mkEleInView]'
 })
-export class EleInViewDirective {
+export class EleInViewDirective implements AfterViewInit {
   @Output() public eleInView = new EventEmitter()
 
   constructor(private _ngZone: NgZone, private _ele: ElementRef) { }

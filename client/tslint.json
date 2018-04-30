@@ -18,7 +18,7 @@
     "no-empty-interface": true,
     "no-import-side-effect": [true, {"ignore-module": "(\\.html|\\.css)$"}],
     "no-internal-module": true,
-    "no-magic-numbers": [true, 0, 1, 2, 3],
+    "no-magic-numbers": [false, 0, 1, 2, 3],
     "no-namespace": true,
     "no-non-null-assertion": true,
     "no-parameter-reassignment": true,

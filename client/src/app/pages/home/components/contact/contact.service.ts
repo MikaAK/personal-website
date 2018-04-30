@@ -13,7 +13,7 @@ export const PULL_PARAMS = {
   LogType: 'None'
 }
 
-export interface SendEmailParams {
+export type SendEmailParams = {
   senderEmail: string
   senderName: string
   message: string
@@ -49,11 +49,11 @@ export class ContactService {
   private connectToLambda() {
     return fromPromise(import('aws-sdk'))
       .pipe(
-        rxMap(({config, Lambda, CognitoIdentityCredentials}) => {
+        rxMap(({config, Lambda: lambdaClient, CognitoIdentityCredentials}) => {
           config.region = LAMBDA_REGION
           config.credentials = new CognitoIdentityCredentials({IdentityPoolId: COGNITO_POOL_ID})
 
-          return new Lambda({
+          return new lambdaClient({
             apiVersion: LAMBDA_VERSION,
             region: LAMBDA_REGION
           })

@@ -8,13 +8,13 @@
     "build": "ng build --prod --aot --build-optimizer --extract-css",
     "test": "ng test --single-run",
     "test:watch": "ng test",
-    "lint": " npm run lint:graphql && npm run lint:javascript",
+    "lint": " npm run lint:javascript",
     "lint:javascript": "ng lint --format=codeFrame",
     "lint:graphql": "eslint ./src --ext .graphql --format=node_modules/eslint-codeframe-formatter",
     "lint:watch": "chokidar '{protractor,karma}.conf.js rule-insert.js {src,e2e}/**/*.js' -c 'npm run lint' --verbose --initial",
     "e2e": "ng e2e",
     "postinstall": "node rule-insert.js",
-    "precommit": "npm run lint && (cd ../server && mix credo)"
+    "precommit": "npm run lint"
   },
   "private": true,
   "dependencies": {

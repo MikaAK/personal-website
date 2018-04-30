@@ -9,7 +9,7 @@ const MEDIUM_SCREEN_WIDTH = 1310
 @Component({
   selector: 'mk-background-poly',
   templateUrl: './background-poly.component.pug',
-  styles: [`:host[reversed] svg { transform: rotate(180deg); }`]
+  styles: [`:host[reversed] svg { transform: rotate(180deg); }`] // tslint:disable-line no-unused-css
 })
 export class BackgroundPolyComponent implements AfterViewInit {
   @Input() public color = '#F5F5F5'
@@ -36,7 +36,7 @@ export class BackgroundPolyComponent implements AfterViewInit {
   public get bottomLeftPosition() {
     let heightModifier
 
-    if (this._viewBoxWidth <= SMALL_SCREEN_WIDTH)
+    if (this._viewBoxWidth <= SMALL_SCREEN_WIDTH) // tslint:disable-line prefer-conditional-expression
       heightModifier = 1
     else
       heightModifier = this._viewBoxWidth >= MEDIUM_SCREEN_WIDTH ? 2 : 1.5
@@ -49,7 +49,7 @@ export class BackgroundPolyComponent implements AfterViewInit {
   }
 
   public get topLeftPosition() {
-    const modifier = this._viewBoxWidth <= SMALL_SCREEN_WIDTH ? .50 : 1
+    const modifier = this._viewBoxWidth <= SMALL_SCREEN_WIDTH ? 0.5 : 1
 
     return Math.floor(modifier * DEFAULT_TOP_LEFT_POS) + this.topLeftModifier
   }
