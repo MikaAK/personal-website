@@ -4,7 +4,7 @@ import {compose, prop} from 'ramda'
 
 import * as projectCards from './project-cards.json'
 
-const ANIMATION_TIME = 375
+const ANIMATION_TIME = 425
 
 const constructImage = (url: string) => import('idle-promise')
   .then((idlePromise) => idlePromise())
@@ -27,7 +27,7 @@ const preloadImages = () => projectCards.forEach(createImageFromUrl)
     trigger('projectCardAnimation', [
       transition('* => *', [
         query('mk-project-card', [
-          style({opacity: 0, transform: 'translateY(-20%)'}),
+          style({opacity: 0, transform: 'translateY(-10%)'}),
 
           stagger(ANIMATION_TIME * 0.5, [
             animate(`${ANIMATION_TIME}ms cubic-bezier(0.0, 0.0, 0.2, 1)`, style({

@@ -1,7 +1,7 @@
 import {Component, HostBinding} from '@angular/core'
 import {trigger, transition, query, style, stagger, animate} from '@angular/animations'
 
-const ANIMATION_TIME = 500
+const ANIMATION_TIME = 425
 
 @Component({
   selector: 'mk-services',
@@ -11,7 +11,7 @@ const ANIMATION_TIME = 500
     trigger('serviceCardAnimation', [
       transition('* => *', [
         query('mat-card', [
-          style({opacity: 0, transform: 'translateY(-20%)'}),
+          style({opacity: 0, transform: 'translateY(-10%)'}),
 
           stagger(ANIMATION_TIME * 0.5, [
             animate(`${ANIMATION_TIME}ms cubic-bezier(0.0, 0.0, 0.2, 1)`, style({
