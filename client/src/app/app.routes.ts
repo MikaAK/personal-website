@@ -7,6 +7,8 @@ export const routes: Routes = [{
   component: HomeComponent
 }, {
   path: 'blog',
-  pathMatch: 'full',
   loadChildren: './pages/blog/blog.module#BlogModule'
+}, {
+  path: '**',
+  redirectTo: ''
 }]

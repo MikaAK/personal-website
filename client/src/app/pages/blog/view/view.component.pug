@@ -1,0 +1,9 @@
+section.blog-view_container(fxLayout='column', fxLayoutAlign='start center', *ngIf='post$ | async as post')
+  .blog-view_image
+    img.br-100([src]='post.imageUrl')
+
+  .mt3.tc
+    h1.blog-view_title {{ post.title }}
+    small.blog-view_date {{ post.date | date: 'longDate' }}
+
+  .lh-copy.blog-view_content([innerHTML]='post.content')

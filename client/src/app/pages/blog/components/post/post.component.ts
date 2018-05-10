@@ -26,6 +26,10 @@ export class BlogPostComponent {
     this.buttonFlexDirection = value ? BUTTON_FLEX_RIGHT : BUTTON_FLEX_LEFT
   }
 
+  public get blogLink() {
+    return `./${this.post.slug}`
+  }
+
   public imageOrderNumber = 0
   public marginClass = MARGIN_LEFT
   public contentFlexDirection = CONTENT_FLEX_LEFT

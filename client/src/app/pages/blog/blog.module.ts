@@ -16,6 +16,7 @@ import {PillModule} from '../../components/pill'
 import {BackgroundPolyModule} from '../../components/background-poly'
 
 import {BlogPostComponent} from './components'
+import {BlogViewComponent} from './view'
 
 import {BlogComponent} from './blog.component'
 import {BlogService} from './blog.service'
@@ -39,6 +40,6 @@ import {blogRoutes} from './blog.routes'
     RouterModule.forChild(blogRoutes)
   ],
   providers: [BlogService],
-  declarations: [BlogPostComponent, BlogComponent]
+  declarations: [BlogPostComponent, BlogComponent, BlogViewComponent]
 })
 export class BlogModule { }

@@ -15,4 +15,6 @@ mat-card.mat-elevation-z7(fxLayout, fxLayout.lt-md='column', fxLayoutAlign.lt-md
       p {{ post.description }}
 
     .w-100(fxLayout.lt-md, fxLayoutAlign.lt-md='center', [fxLayoutAlign.gt-sm]='buttonFlexDirection')
-      button.bg-washed-blue.white(mat-button, color='primary') Read More
+      button.nav-link-btn.bg-washed-blue.white(mat-button, color='primary')
+        a([routerLink]='blogLink')
+        span Read More

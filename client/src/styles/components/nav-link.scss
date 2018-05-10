@@ -5,3 +5,25 @@
     color: white;
   }
 }
+
+.mat-button.nav-link-btn {
+  position: relative;
+  padding: 0;
+
+  .mat-button-wrapper {
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 0 16px;
+  }
+
+  a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

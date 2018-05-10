@@ -12,6 +12,9 @@ interface NodeModule {
 
 declare module '*.json';
 declare module '*.graphql';
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.svg';
 declare module 'lodash.words';
 declare module 'idle-promise';
 declare module 'smoothscroll-polyfill';

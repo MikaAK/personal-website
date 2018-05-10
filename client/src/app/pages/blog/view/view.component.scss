@@ -1,0 +1,52 @@
+@import '~breakpoint-sass';
+@import '~styles/utility';
+
+$image-size: 15rem;
+$small-screen-image-size: 20rem;
+
+$font-change-size: 750px;
+
+.blog-view_container {
+  padding: 4rem $spacing-medium $spacing-medium $spacing-medium;
+
+  @include full-window;
+}
+
+.blog-view_content {
+  max-width: 800px;
+  margin-top: 11rem;
+  font-size: 1.5rem;
+
+  @include breakpoint($font-change-size) {
+    font-size: 1.2rem;
+  }
+}
+
+.blog-view_title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 100;
+  margin-top: 50px;
+
+  @include breakpoint($screen-min-xs) {
+    font-size: 2.5rem;
+    margin-top: 0px;
+  }
+}
+
+.blog-view_date {
+  font-size: 1rem;
+  color: $light-gray;
+  margin-top: $spacing-small;
+  font-weight: 100;
+}
+
+.blog-view_image {
+  width: $small-screen-image-size;
+  height: $small-screen-image-size;
+
+  @include breakpoint($font-change-size) {
+    width: $image-size;
+    height: $image-size;
+  }
+}
