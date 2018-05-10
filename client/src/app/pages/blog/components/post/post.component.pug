@@ -1,0 +1,18 @@
+mat-card.mat-elevation-z7(fxLayout, fxLayout.lt-md='column', fxLayoutAlign.lt-md='center center')
+  .post_img([fxFlexOrder.gt-sm]='imageOrderNumber')
+    img([src]='post.imageUrl', alt='blogImg')
+
+  div(
+    fxLayout='column',
+    [fxLayoutAlign.gt-sm]='contentFlexDirection',
+    [ngClass.gt-sm]='marginClass',
+    ngClass.lt-md='mt3'
+  )
+    mat-card-title {{ post.title }}
+    mat-card-subtitle.gray {{ post.date | date: 'longDate' }}
+
+    mat-card-content
+      p {{ post.description }}
+
+    .w-100(fxLayout.lt-md, fxLayoutAlign.lt-md='center', [fxLayoutAlign.gt-sm]='buttonFlexDirection')
+      button.bg-washed-blue.white(mat-button, color='primary') Read More

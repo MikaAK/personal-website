@@ -94,15 +94,10 @@
         </mat-toolbar>
       </mk-nav-bar>
 
-      <main class='min-vh-100'>
+      <main class='min-vh-100 relative'>
+        <div class='w-100 vh-75 ph5 pt5 pb3 trskY8 absolute top-0 left-0 z-0 mat-elevation-z3 landing-intro_background'></div>
+
         <router-outlet></router-outlet>
-        <mk-home>
-          <section>
-            <mk-landing-intro class='pb3 ph3' id='home'>
-              <div class='w-100 vh-75 ph5 pt5 pb3 trskY8 absolute top-0 left-0 z-0 mat-elevation-z3 landing-intro_background'></div>
-            </mk-landing-intro>
-          </section>
-        </mk-home>
       </main>
     </mk-root>
   </body>

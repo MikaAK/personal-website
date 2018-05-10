@@ -5,4 +5,8 @@ export const routes: Routes = [{
   path: '',
   pathMatch: 'full',
   component: HomeComponent
+}, {
+  path: 'blog',
+  pathMatch: 'full',
+  loadChildren: './pages/blog/blog.module#BlogModule'
 }]

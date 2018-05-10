@@ -1,0 +1,19 @@
+$image-size: 13rem;
+
+:host {
+  display: block;
+
+}
+
+// .mat-card-content p {
+  // max-height: 3.5rem;
+// }
+
+.post_img {
+  min-width: $image-size;
+  width: $image-size;
+
+  img {
+    display: block;
+  }
+}
