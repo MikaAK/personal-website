@@ -7,3 +7,12 @@ section.blog-view_container(fxLayout='column', fxLayoutAlign='start center', *ng
     small.blog-view_date {{ post.date | date: 'longDate' }}
 
   .lh-copy.blog-view_content([innerHTML]='post.content')
+
+  .mt4.blog-view_comments.tc
+    button.bg-washed-blue.white(
+      mat-button,
+      *ngIf='!isCommentsLoaded',
+      (click)='loadComments()'
+    ) Load Comments
+
+    #disqus_thread

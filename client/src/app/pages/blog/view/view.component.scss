@@ -2,24 +2,39 @@
 @import '~styles/utility';
 
 $image-size: 15rem;
-$small-screen-image-size: 20rem;
+$extra-small-screen-image-size: 18rem;
+$small-screen-image-size: 14rem;
 
 $font-change-size: 750px;
 
 .blog-view_container {
-  padding: 4rem $spacing-medium $spacing-medium $spacing-medium;
+  padding: 2rem $spacing-medium $spacing-large $spacing-medium;
 
   @include full-window;
+
+  @include breakpoint($navbar-layout-switch) {
+    padding-top: 3rem;
+  }
+}
+
+.blog-view_content,
+#disqus_thread,
+.blog-view_comments {
+  max-width: 650px;
+  width: 100%;
 }
 
 .blog-view_content {
-  max-width: 800px;
   margin-top: 11rem;
   font-size: 1.5rem;
 
   @include breakpoint($font-change-size) {
     font-size: 1.2rem;
   }
+}
+
+.blog-view_comments {
+  min-height: 36px;
 }
 
 .blog-view_title {
@@ -30,6 +45,9 @@ $font-change-size: 750px;
 
   @include breakpoint($screen-min-xs) {
     font-size: 2.5rem;
+  }
+
+  @include breakpoint($screen-min-sm) {
     margin-top: 0px;
   }
 }
@@ -42,11 +60,20 @@ $font-change-size: 750px;
 }
 
 .blog-view_image {
-  width: $small-screen-image-size;
-  height: $small-screen-image-size;
+  width: 75%;
+  max-width: $extra-small-screen-image-size;
+
+  @include breakpoint($screen-min-xs) {
+    width: 50%;
+    max-width: $small-screen-image-size;
+  }
 
   @include breakpoint($font-change-size) {
     width: $image-size;
-    height: $image-size;
+  }
+
+  img {
+    width: 100%;
+    display: block;
   }
 }
