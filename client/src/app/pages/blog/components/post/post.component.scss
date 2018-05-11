@@ -11,9 +11,12 @@ $image-size: 13rem;
 
 .post_img {
   min-width: $image-size;
+  min-height: $image-size;
   width: $image-size;
+  height: $image-size;
 
   img {
     display: block;
+    width: 100%;
   }
 }

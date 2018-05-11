@@ -75,26 +75,44 @@
   <body>
     <mk-root>
       <mk-nav-bar>
-        <mat-toolbar
-          class='z-9999 w-100 flex items-center justify-between mat-toolbar mat-toolbar-single-row'
-          style='position: absolute; background-color: transparent;'
-        >
-          <div class='icon-s'>
-            <svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'>
-              <path d='M28.0429185,39.8832952 C28.0429185,36.2128146 28.0703863,33.201373 28.116166,33.201373 C28.1527897,33.2105263 28.8028612,34.0617849 29.5536481,35.1052632 C30.3135908,36.1487414 32.5934192,39.1510297 34.6351931,41.7871854 L38.3433476,46.5652174 L42.0240343,46.5652174 C44.0566524,46.5652174 45.713877,46.5469108 45.713877,46.5194508 C45.713877,46.5011442 43.388269,43.5629291 40.5407725,40.0022883 C37.565093,36.2860412 35.376824,33.4668192 35.3951359,33.3844394 C35.4134478,33.3112128 37.7482117,29.7231121 40.5865522,25.4210526 C43.4248927,21.1189931 45.8237482,17.4576659 45.9153076,17.3020595 L46.0984263,17 L42.4909871,17 L38.8927039,17.0091533 L35.8254649,21.8146453 C34.1407725,24.4599542 32.4286123,27.1327231 32.0165951,27.7643021 L31.2841202,28.9084668 L29.6635193,27.1601831 L28.0429185,25.4210526 L28.0429185,21.2105263 L28.0429185,17 L25.0214592,17 L22,17 L22,31.7826087 L22,46.5652174 L25.0214592,46.5652174 L28.0429185,46.5652174 L28.0429185,39.8832952 Z' fill='#FFF' transform='matrix(1 0 0 -1 0 63.565)'></path>
+        <mat-toolbar class="z-9999 w-100 flex items-center justify-between mat-toolbar ng-trigger ng-trigger-navBarFixed mat-toolbar-single-row" style="position: absolute; background-color: transparent;">
+          <div class="icon-s ng-tns-c1-0">
+           <svg class="ng-tns-c1-0" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+             <path class="ng-tns-c1-0" d="M28.0429185,39.8832952 C28.0429185,36.2128146 28.0703863,33.201373 28.116166,33.201373 C28.1527897,33.2105263 28.8028612,34.0617849 29.5536481,35.1052632 C30.3135908,36.1487414 32.5934192,39.1510297 34.6351931,41.7871854 L38.3433476,46.5652174 L42.0240343,46.5652174 C44.0566524,46.5652174 45.713877,46.5469108 45.713877,46.5194508 C45.713877,46.5011442 43.388269,43.5629291 40.5407725,40.0022883 C37.565093,36.2860412 35.376824,33.4668192 35.3951359,33.3844394 C35.4134478,33.3112128 37.7482117,29.7231121 40.5865522,25.4210526 C43.4248927,21.1189931 45.8237482,17.4576659 45.9153076,17.3020595 L46.0984263,17 L42.4909871,17 L38.8927039,17.0091533 L35.8254649,21.8146453 C34.1407725,24.4599542 32.4286123,27.1327231 32.0165951,27.7643021 L31.2841202,28.9084668 L29.6635193,27.1601831 L28.0429185,25.4210526 L28.0429185,21.2105263 L28.0429185,17 L25.0214592,17 L22,17 L22,31.7826087 L22,46.5652174 L25.0214592,46.5652174 L28.0429185,46.5652174 L28.0429185,39.8832952 Z" fill="#FFF" transform="matrix(1 0 0 -1 0 63.565)"></path>
             </svg>
           </div>
-          <nav>
-            <ol class='flex items-center justify-center'>
-              <li class='white mh3'><button class='nav-bar_button' type='button'>Home</button></li>
-              <li class='white mh3'><button class='nav-bar_button' type='button'>Projects</button></li>
-              <li class='white mh3'><button class='nav-bar_button' type='button'>Contact</button></li>
+          <nav class="ng-tns-c1-0">
+            <ol class="flex items-center justify-center">
+              <li class="white mh3">
+                <button class="nav-bar_button nav-link-btn" type="button">
+                  <a class="ng-tns-c1-0" routerlink="/" ng-reflect-router-link="/" href="/"></a>
+                  <span class="ng-tns-c1-0">Home</span>
+                </button>
+              </li>
+              <li class="white mh3">
+                <button class="nav-bar_button nav-link-btn" type="button">
+                  <a class="ng-tns-c1-0" routerlink="/" ng-reflect-router-link="/" href="/"></a>
+                  <span class="ng-tns-c1-0">Projects</span>
+                </button>
+              </li>
+              <li class="white mh3">
+                <button class="nav-bar_button nav-link-btn" type="button">
+                  <a class="ng-tns-c1-0" routerlink="/blog" ng-reflect-router-link="/blog" href="/blog"></a>
+                  <span class="ng-tns-c1-0">Blog</span>
+                </button>
+              </li>
+              <li class="white mh3">
+                <button class="nav-bar_button nav-link-btn" type="button">
+                  <a class="ng-tns-c1-0" routerlink="/" ng-reflect-router-link="/" href="/"></a>
+                  <span class="ng-tns-c1-0">Contact</span>
+                </button>
+              </li>
             </ol>
           </nav>
         </mat-toolbar>
       </mk-nav-bar>
 
-      <main class='min-vh-100 relative'>
+      <main class='full-window relative'>
         <div class='w-100 ph5 pt5 pb3 trskY8 absolute top-0 left-0 z-0 mat-elevation-z3 landing-intro_background'></div>
 
         <router-outlet></router-outlet>

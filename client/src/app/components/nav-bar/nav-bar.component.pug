@@ -5,28 +5,35 @@ mat-toolbar.z-9999.w-100.flex.items-center.justify-between('[@navBarFixed]'='nav
   nav
     ol.flex.items-center.justify-center
       li.white.mh3
-        button.nav-bar_button(
+        button.nav-bar_button.nav-link-btn(
           (click)='scrollTo("home")',
           type='button'
-        ) Home
+        )
+          a(routerLink='/')
+          span Home
 
       li.white.mh3
-        button.nav-bar_button(
+        button.nav-bar_button.nav-link-btn(
           (click)='scrollTo("projects")',
           type='button'
-        ) Projects
+        )
+          a(routerLink='/')
+          span Projects
 
       li.white.mh3
-        button.nav-bar_button(
-          routerLink='/blog',
+        button.nav-bar_button.nav-link-btn(
           type='button'
-        ) Blog
+        )
+          a(routerLink='/blog')
+          span Blog
 
       //- li.white
       //-   button.mk-list-link Blog
 
       li.white.mh3
-        button.nav-bar_button(
+        button.nav-bar_button.nav-link-btn(
           (click)='scrollTo("contact")',
           type='button'
-        ) Contact
+        )
+          a(routerLink='/')
+          span Contact
