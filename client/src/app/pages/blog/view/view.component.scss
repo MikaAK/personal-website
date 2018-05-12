@@ -61,11 +61,14 @@ $font-change-size: 750px;
 
 .blog-view_image {
   width: 75%;
+  height: $extra-small-screen-image-size;
   max-width: $extra-small-screen-image-size;
+  max-height: $extra-small-screen-image-size;
 
   @include breakpoint($screen-min-xs) {
     width: 50%;
     max-width: $small-screen-image-size;
+    max-height: $small-screen-image-size;
   }
 
   @include breakpoint($font-change-size) {
