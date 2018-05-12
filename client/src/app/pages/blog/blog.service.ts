@@ -16,7 +16,7 @@ export class BlogService {
   public posts$ = rxOf<BlogPost[]>([{
     title: 'Hello... World?',
     slug: 'hello-world',
-    imageUrl: 'https://placeimg.com/200/200',
+    imageUrl: 'assets/img/blog-post-1.jpg',
     date: new Date(),
     description: 'The first post of many to come. This post is all about my reasons for starting this blog and inspirations.',
     content: `
