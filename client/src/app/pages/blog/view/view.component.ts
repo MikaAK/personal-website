@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core'
 import {ActivatedRoute, Router} from '@angular/router'
-import {Observable} from 'rxjs/Observable'
-import {mergeMap, take as rxTake, map as rxMap, tap as rxTap} from 'rxjs/operators'
-import {prop} from 'ramda'
+import {Observable} from 'rxjs'
+import {mergeMap, take as rxTake, tap as rxTap} from 'rxjs/operators'
 
 import {BlogPost} from '../../../models'
+import {rxMapProp} from '../../../../shared/helpers/rxjs'
 
 import {BlogService} from '../blog.service'
 
@@ -24,7 +24,7 @@ const loadComments = (pageUrl: string, postSlug: string) => {
   /* tslint:enable */
 }
 
-const rxMapToSlug = rxMap<BlogPost, string>(prop('slug'))
+const rxMapToSlug = rxMapProp<any>('slug')
 
 @Component({
   selector: 'mk-blog-view',

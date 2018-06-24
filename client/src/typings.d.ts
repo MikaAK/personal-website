@@ -8,6 +8,7 @@ interface PayloadAction<T = any> {
 
 interface NodeModule {
   id: string
+  hot: boolean
 }
 
 declare module '*.json';
@@ -15,6 +16,7 @@ declare module '*.graphql';
 declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.svg';
-declare module 'lodash.words';
 declare module 'idle-promise';
 declare module 'smoothscroll-polyfill';
+declare module 'lodash.words';
+declare module 'creditcards*';

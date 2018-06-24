@@ -14,7 +14,7 @@ describe('Helpers: Util', () => {
       })
     }
 
-    const anyTrueTests = [{
+    const anyTrueTests = <AnyTrueTestConfig[]>[{
       caseInfo: 'nil',
       item: null,
       expected: false

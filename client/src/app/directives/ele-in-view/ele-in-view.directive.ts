@@ -7,21 +7,28 @@ interface IIntersectionCallback {
 
 const callbacks: IIntersectionCallback[] = []
 
-export const findCallback = (target: Element) => {
-  return callbacks.find((callback) => callback.target === target)
+export const findCallback = (target: Element): IIntersectionCallback => {
+  return <IIntersectionCallback>callbacks.find((callback) => callback.target === target)
 }
 
 export const isEntryVisible = (entry: IntersectionObserverEntry) => {
   return entry.intersectionRatio !== 0
 }
 
-export const observerCallback = (entries: IntersectionObserverEntry[], interObserver: IntersectionObserver) => {
+export const observerCallback = (entries: IntersectionObserverEntry[], intObserver: IntersectionObserver) => {
   return entries
     .filter(isEntryVisible)
-    .map((entry) => [entry, findCallback(entry.target)])
-    .forEach(([entry, callbackStore]: [IntersectionObserverEntry, IIntersectionCallback]) => {
+    .map((entry) => {
+      const item: [IntersectionObserverEntry, IIntersectionCallback] = [
+        entry,
+        findCallback(entry.target)
+      ]
+
+      return item
+    })
+    .forEach(([entry, callbackStore]) => {
       callbackStore.callback(entry)
-      interObserver.unobserve(entry.target)
+      intObserver.unobserve(entry.target)
     })
 }
 
@@ -36,7 +43,7 @@ export const intersectionObserver = (target: Element, callback: Function) => {
   selector: '[mkEleInView]'
 })
 export class EleInViewDirective implements AfterViewInit {
-  @Output('mkEleInView') public eleInView = new EventEmitter() // tslint:disable-line no-output-rename
+  @Output('mkEleInView') public eleInView = new EventEmitter()
 
   constructor(private _ngZone: NgZone, private _ele: ElementRef) { }
 

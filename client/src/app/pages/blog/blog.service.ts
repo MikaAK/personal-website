@@ -1,14 +1,11 @@
 import {Injectable} from '@angular/core'
-import {Observable} from 'rxjs/Observable'
-import {of as rxOf} from 'rxjs/observable/of'
+import {Observable, of as rxOf} from 'rxjs'
 import {map as rxMap} from 'rxjs/operators'
-import {curryN, compose, propEq, find as _find} from 'ramda'
+import {curryN, propEq, find as _find} from 'ramda'
 
 import {BlogPost} from '../../models'
 
-type FindPropEq = (prop: string, equalsValue: any) => (items: any[]) => any
-
-const findPropEq: FindPropEq = curryN(2, compose(_find, propEq))
+const findPropEq = curryN(3, (prop: string, equalsValue: any, items: any[]) => _find(propEq(prop, equalsValue))(items))
 
 @Injectable()
 export class BlogService {

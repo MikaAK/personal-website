@@ -11,7 +11,6 @@
     "strictNullChecks": true,
     "alwaysStrict": true,
     "strict": true,
-    "noImplicitAny": true,
     "allowUnreachableCode": false,
     "strictPropertyInitialization": false,
     "noUnusedLocals": true,
@@ -21,7 +20,7 @@
     "target": "es5",
     "rootDirs": ["./src", "./src/app"],
     "plugins": [
-      {"name": "@angular/language-service"},
+      {"name": "@angular/language-service"}
     ],
     "typeRoots": [
       "node_modules/@types"
