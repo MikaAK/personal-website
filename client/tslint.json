@@ -2,14 +2,14 @@
   "tsConfigFile": "src/tsconfig.app.json",
   "rulesDirectory": [
     "codelyzer",
-    "tslint-eslint-rules"
+    "tslint-eslint-rules",
+    "rxjs-tslint"
   ],
   "extends": [
     "tslint-eslint-rules"
   ],
   "rules": {
     "ban-comma-operator": true,
-    "no-implicit-dependencies": [true, "dev"],
     "no-return-await": true,
     "no-redundant-jsdoc": true,
     "adjacent-overload-signatures": true,
@@ -18,7 +18,7 @@
     "no-empty-interface": true,
     "no-import-side-effect": [true, {"ignore-module": "(\\.html|\\.css)$"}],
     "no-internal-module": true,
-    "no-magic-numbers": [false, 0, 1, 2, 3],
+    "no-magic-numbers": [true, -1, 0, 1, 2, 3, 10, 15, 20, 25, 30, 100],
     "no-namespace": true,
     "no-non-null-assertion": true,
     "no-parameter-reassignment": true,
@@ -31,7 +31,6 @@
     "label-position": true,
     "no-arg": true,
     "use-isnan": true,
-    "typeof-compare": true,
     "triple-equals": true,
     "prefer-object-spread": true,
     "prefer-conditional-expression": true,
@@ -124,17 +123,17 @@
     "use-output-property-decorator": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,
-    "pipe-naming": ["camelCase", "mk"],
+    "pipe-naming": ["camelCase", "app"],
     "directive-selector": [
       true,
       "attribute",
-      "mk",
+      "app",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "mk",
+      "app",
       "kebab-case"
     ],
 
@@ -156,6 +155,10 @@
     "ter-no-irregular-whitespace": true,
     "ter-no-sparse-arrays": true,
     "ter-func-call-spacing": [true, "never"],
-    "ter-indent": [true, 2, {"VariableDeclarator": {"var": 2, "let": 2, "const": 3}}]
+    "ter-indent": [true, 2, {"VariableDeclarator": {"var": 2, "let": 2, "const": 3}}],
+    "rxjs-collapse-imports": true,
+    "rxjs-pipeable-operators-only": true,
+    "rxjs-no-static-observable-methods": true,
+    "rxjs-proper-imports": true
   }
 }
