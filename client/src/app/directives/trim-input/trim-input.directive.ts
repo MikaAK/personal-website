@@ -1,8 +1,7 @@
 import {Directive, HostListener, OnDestroy, OnInit} from '@angular/core'
 import {NgControl} from '@angular/forms'
 import {trim} from 'ramda'
-import {Subject} from 'rxjs/Subject'
-import {Subscription} from 'rxjs/Subscription'
+import {Subject, Subscription} from 'rxjs'
 import {debounceTime, map as rxMap} from 'rxjs/operators'
 
 const DEBOUNCE_TIMEOUT = 300

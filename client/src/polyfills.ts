@@ -16,7 +16,6 @@
  * Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
  */
 
-import 'intersection-observer'
 import 'core-js/es7/reflect' // Needed without AOT
 
 /***************************************************************************************************

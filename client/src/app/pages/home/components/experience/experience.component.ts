@@ -1,7 +1,7 @@
 import {Component} from '@angular/core'
 import {query, transition, trigger, animate, style, stagger, group} from '@angular/animations'
 
-import * as experienceItems from './experience-items.json'
+import experienceItems from './experience-items.json'
 // Stagger seems to pre calculate this in AOT so it doesn't actually work
 const isMobile = false // window.innerWidth < 550
 const ANIMATION_LINE_DOWN_TIME = isMobile ? 0 : 375

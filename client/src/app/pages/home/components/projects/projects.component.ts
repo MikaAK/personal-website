@@ -2,12 +2,12 @@ import {Component, HostBinding, AfterViewInit} from '@angular/core'
 import {trigger, transition, query, style, stagger, animate} from '@angular/animations'
 import {compose, prop} from 'ramda'
 
-import * as projectCards from './project-cards.json'
+import projectCards from './project-cards.json'
 
 const ANIMATION_TIME = 425
 
-const constructImage = (url: string) => import('idle-promise')
-  .then((idlePromise) => idlePromise())
+const constructImage = (url: string): Promise<HTMLImageElement> => import('idle-promise')
+  .then(({default: idlePromise}) => idlePromise())
   .then(() => {
     const img = new Image()
 
@@ -16,7 +16,7 @@ const constructImage = (url: string) => import('idle-promise')
     return img
   })
 
-const createImageFromUrl = compose(constructImage, prop('imageUrl'))
+const createImageFromUrl = compose(constructImage, prop<string, string>('imageUrl'))
 const preloadImages = () => projectCards.forEach(createImageFromUrl)
 
 @Component({

@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core'
-import {Observable} from 'rxjs/Observable'
+import {Observable, from as fromPromise} from 'rxjs'
 import {map as rxMap, switchMap} from 'rxjs/operators'
-import {fromPromise} from 'rxjs/observable/fromPromise'
 import {Lambda} from 'aws-sdk'
 
 export const COGNITO_POOL_ID = 'us-west-2:72c055c5-e4ba-4ae1-9223-e1a616eb1a18'

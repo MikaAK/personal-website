@@ -1,7 +1,6 @@
 import {Component, HostListener} from '@angular/core'
 import {trigger, state, style, sequence, transition, animate} from '@angular/animations'
-import {BehaviorSubject} from 'rxjs/BehaviorSubject'
-import {Observable} from 'rxjs/Observable'
+import {BehaviorSubject, Observable} from 'rxjs'
 import {map as rxMap, distinctUntilChanged} from 'rxjs/operators'
 
 import {scrollToElementId} from '../../../shared/helpers/ui'

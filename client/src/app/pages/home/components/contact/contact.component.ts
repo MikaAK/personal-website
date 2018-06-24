@@ -2,7 +2,7 @@ import {Component, HostBinding, Input} from '@angular/core'
 import {trigger, transition, query, style, stagger, animate} from '@angular/animations'
 import {FormBuilder, Validators} from '@angular/forms'
 import {catchError, mapTo as rxMapTo} from 'rxjs/operators'
-import {of as rxOf} from 'rxjs/observable/of'
+import {of as rxOf} from 'rxjs'
 
 import {ContactService} from './contact.service'
 

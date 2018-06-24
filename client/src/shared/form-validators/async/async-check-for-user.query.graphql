@@ -1,7 +1,0 @@
-#import '../../queries/user/fields.graphql'
-
-query CheckForExistingUser($email: String, $phoneNumber: String) {
-  accountUser(email: $email, phoneNumber: $phoneNumber) {
-    id
-  }
-}

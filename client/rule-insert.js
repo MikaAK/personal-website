@@ -3,8 +3,8 @@ const {tap, compose, toPairs, values: objValues, flip, concat, join, filter, isE
 
 const commonCliConfig = 'node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/webpack-configs/common.js'
 const rules = {
-  pug: `\n{ test: /\\.pug$/, exclude: /node_modules/, loader: 'apply-loader!pug-loader?self' }`
-  // svgInline: `\n{ test: /\\.svg/, exclude: /node_modules/, loader: 'svg-inline-loader' }`,
+  pug: `\n{ test: /\\.pug$/, exclude: /node_modules/, loader: 'apply-loader!pug-loader?self' }`,
+  svgInline: `\n{ test: /\\.svg/, exclude: /node_modules/, loader: 'svg-inline-loader' }`
   // graphqlLoader: `\n{ test: /\\.graphql$/, exclude: /node_modules/, loader: 'graphql-tag/loader', enforce: 'pre' }`
 }
 
@@ -16,7 +16,7 @@ fs.readFile(commonCliConfig, (err, data) => {
     throw err
 
   // Replace file-loader regex for svgs to not include svg
-  const configText = data.toString() // .replace(/eot\|svg\|cur/g, 'eot|cur')
+  const configText = data.toString().replace(/eot\|svg\|cur/g, 'eot|cur')
 
   const unusedRules = filter((rule) => configText.indexOf(rule) === -1, rules)
 

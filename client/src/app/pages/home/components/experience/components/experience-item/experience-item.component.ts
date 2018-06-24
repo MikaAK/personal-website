@@ -1,7 +1,7 @@
 import {Component, Input, OnDestroy} from '@angular/core'
 import {MediaChange, ObservableMedia} from '@angular/flex-layout'
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser'
-import {Subscription} from 'rxjs/Subscription'
+import {Subscription} from 'rxjs'
 
 @Component({
   selector: 'mk-experience-item',

@@ -4,7 +4,6 @@ import {RouterModule} from '@angular/router'
 import {ReactiveFormsModule} from '@angular/forms'
 import {FlexLayoutModule} from '@angular/flex-layout'
 import {PieChartModule} from '@swimlane/ngx-charts'
-import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to'
 import {
   MatButtonModule,
   MatCardModule,
@@ -33,7 +32,6 @@ import {blogRoutes} from './blog.routes'
     MatFormFieldModule,
     MatButtonModule,
     PieChartModule,
-    ScrollToModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule,
     CommonModule,
