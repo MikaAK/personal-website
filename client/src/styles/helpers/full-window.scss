@@ -1,3 +1,7 @@
 .full-window {
   @include full-window;
 }
+
+.full-window-height {
+  @include full-window-height;
+}

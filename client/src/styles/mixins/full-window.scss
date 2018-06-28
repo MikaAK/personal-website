@@ -1,4 +1,10 @@
+$page-height-without-navbar: calc(100vh - #{$navbar-footer-size});
+
 @mixin full-window {
-  min-height: calc(100vh - #{$navbar-footer-size});
+  min-height: $page-height-without-navbar;
   min-width: 100vw;
+}
+
+@mixin full-window-height {
+  min-height: $page-height-without-navbar;
 }
