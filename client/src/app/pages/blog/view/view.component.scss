@@ -10,7 +10,7 @@ $font-change-size: 750px;
 .blog-view_container {
   padding: 2rem $spacing-medium $spacing-large $spacing-medium;
 
-  @include full-window;
+  @include full-window-height;
 
   @include breakpoint($navbar-layout-switch) {
     padding-top: 3rem;

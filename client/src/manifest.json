@@ -6,7 +6,7 @@
   "short_name": "Mika",
   "description": "Portfolio and web resume of a developer",
   "theme_color": "#485963",
-  "background_color": "#485963",
+  "background_color": "#031131",
   "serviceworker": {
     "src": "ngsw-worker.js",
     "scope": "/",
